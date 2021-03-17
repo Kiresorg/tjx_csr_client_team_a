@@ -104,6 +104,7 @@ console.log(response.data)
 }
 
 //--------------------------------------------------------------------------------
+//PRODUCTS
 
 async function getAllProducts() {
 	const response = await axios ({
