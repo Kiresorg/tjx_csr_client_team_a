@@ -9,4 +9,6 @@ function loginEvent(){
     window.alert(loginInfo.email + " " + loginInfo.password);
     document.getElementById("email_input").value = "";
     document.getElementById("password_input").value ="";
+
+    //TODO: Will check authentication through the user/password tables
 }

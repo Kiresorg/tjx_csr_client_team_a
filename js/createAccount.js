@@ -33,6 +33,7 @@ function submitAccount(){
     loginInfo.password = $("#password_input").value;
     loginInfo.password2 = $("#password2_input").value;
 
+    //TODO: Will add a post to create the account
     //Arbitrary actions before button is linked to database
     window.alert("account created!")
     $("#firstName_input").val('');
