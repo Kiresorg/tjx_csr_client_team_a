@@ -29,6 +29,9 @@ $("#customerNotes_input").val(dummyData.customerNotes);
 //Add event listener for the update button
 $("#update_button").on("click", updateCustomer);
 
+//TODO: Add event listener to cancel changes and just return to viewing this customer
+//$("#cancel_button").on("click", updateCustomer);
+
 //TODO: function to check every input to match up with the database
 function checkInputs(){
 
