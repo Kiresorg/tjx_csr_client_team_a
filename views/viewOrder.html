@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+       
+        <title>20% Maxxinista Capstone</title>
+        <meta name="description" content="Client Side Application">
+        <meta name="author" content="The 20% Maxxinistas">
+      
+        <!-- Bulma CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+      
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
+       
+      </head>
+
+   <body>
+
+    <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+        <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="#">
+            CSR Portal
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        </div>
+        
+        <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                Orders
+            </a>
+        
+            <a class="navbar-item">
+                Customers
+            </a>
+
+            <a class="navbar-item">
+                Inventory
+            </a>
+            <form class="navbar-item">
+                <input class="input is-rounded" type="text" placeholder="Search">
+                <button class="button is-small is-info is-rounded" style="margin-left: 10px;" type="submit"><i class="fas fa-search fa-md"></i></button>
+            </form>
+                
+        </div>
+        
+        <div class="navbar-end">
+            <a class="navbar-item">
+                New order
+            </a>
+        
+            <a class="navbar-item">
+                Create new customer
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <i class="fas fa-user-circle fa-2x"></i>
+                </a>
+            
+                <div class="navbar-dropdown is-right">
+                <a class="navbar-item">
+                    Settings
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                    Logout
+                </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <script src="js/app.js"></script>
+
+    <div class="tile is-ancestor">
+        <div class="tile is-vertical is-7">
+            <div class="tile is-parent">
+                <article class="tile is-child notification has-background-grey-light">
+                    <div class="content">
+                        <p class="subtitle"><u>Order ID:</u></p>
+                        <p class="text1">Date Created:</p>
+                        <p class="text1">Customer Name:</p>
+                        <p class="text1">Products:</p>
+                        <p class="text1">Customer Notes:</p>
+                        <p class="text1">Shipping Address:</p>
+                        <p class="subtitle"><b>Price:</b></p>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
