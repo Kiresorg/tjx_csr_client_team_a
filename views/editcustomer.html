@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Register Page</title>
+      <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
+    </head>
+   <body>
+    <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="#">
+            CSR Portal
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+                Orders
+            </a>
+      
+            <a class="navbar-item">
+                Customers
+            </a>
+
+            <a class="navbar-item">
+                Inventory
+            </a>
+            <form class="navbar-item">
+                <input class="input is-rounded" type="text" placeholder="Search">
+                <button class="button is-small is-info is-rounded" style="margin-left: 10px;" type="submit"><i class="fas fa-search fa-md"></i></button>
+            </form>
+            
+          </div>
+      
+          <div class="navbar-end">
+            <a class="navbar-item">
+                New order
+            </a>
+      
+            <a class="navbar-item">
+                Create new customer
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <i class="fas fa-user-circle fa-2x"></i>
+                </a>
+        
+                <div class="navbar-dropdown is-right">
+                  <a class="navbar-item">
+                    Settings
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item">
+                    Logout
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <section class="hero is-success is-fullheight">
+        <div class="hero-body has-background-grey-lighter">
+            <div class="column is-4 is-offset-4">
+                <div class="box">
+                    <h4 class="title is-4 has-text-black">Edit Customer</h4>
+                    <div class="field">
+                        <label class="label">First Name</label>
+                        <div class="control">
+                            <input id ="firstName_input" class="input" type="text" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Middle Name</label>
+                        <div class="control">
+                            <input id = "middleName_input" class="input" type="text" placeholder="Middle Name">
+                        </div>
+                    </div>
+                    <div class="field">
+                            <label class="label">Last Name</label>
+                        <div class="control">
+                            <input id = "lastName_input" class="input" type="text" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Phone Number</label>
+                    <div class="control">
+                        <input id = "phoneNumber_input" class="input" type="tel" placeholder="Phone Number">
+                    </div>
+                </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id = "email_input" class="input" type="email" placeholder="Email input"></input>
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Street Address</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id = "address1_input" class="input" type="input" placeholder="Street Address">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-address-book"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Address Line 2</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id = "address2_input" class="input" type="input" placeholder="Address Line 2">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-address-book"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class = "columns">
+                        <div class = "column">
+                            <div class="field">
+                                <label class="label">City</label>
+                                <div class="control">
+                                    <input id = "city_input" class="input" type="input" placeholder="City">
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "column">
+                            <div class="field">
+                                <label class="label">State</label>
+                                <div class="control">
+                                    <input id = "state_input" class="input" type="input" placeholder="State Ex: MA, CT, NJ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "column">
+                            <div class="field">
+                                <label class="label">Zip Code</label>
+                                <div class="control">
+                                    <input id = "zipcode_input" class="input" type="input" placeholder="Zip Code">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                    <div class="field">
+                        <label class="label">Customer Notes</label>
+                        <div class="control">
+                          <textarea id="customerNotes_input" class="textarea" placeholder="Notes"></textarea>
+                        </div>
+                      </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button id = "update_button" class="button is-link">Update</button>
+                            <button id = "cancel_button" class="button is-danger">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src = "../js/editCustomer.js"></script>
+  </body>
+</html>
