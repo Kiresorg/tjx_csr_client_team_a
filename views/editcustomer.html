@@ -80,10 +80,11 @@
             <div class="column is-4 is-offset-4">
                 <div class="box">
                     <h4 class="title is-4 has-text-black">Edit Customer</h4>
+                    <form action="/action_page.php">
                     <div class="field">
                         <label class="label">First Name</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input class="input" type="text" placeholder="First Name" required>
                         </div>
                     </div>
                     <div class="field">
@@ -95,13 +96,13 @@
                     <div class="field">
                             <label class="label">Last Name</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input class="input" type="text" placeholder="Last Name"required>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Phone Number</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input class="input" type="tel" placeholder="Phone Number">
+                        <input class="input" type="tel" pattern="[0-9]{10}" placeholder="Phone Number"required>
                         <span class="icon is-small is-left">
                             <i class="fa fa-phone"></i>
                         </span>
@@ -110,7 +111,7 @@
                     <div class="field">
                         <label class="label">Email</label>
                         <div class="control has-icons-left has-icons-right">
-                            <input class="input" type="email" placeholder="Email input"></input>
+                            <input class="input" type="email" placeholder="Email input"required>
                             <span class="icon is-small is-left">
                                 <i class="fa fa-envelope"></i>
                             </span>
@@ -119,7 +120,7 @@
                     <div class="field">
                         <label class="label">Street Address</label>
                         <div class="control has-icons-left has-icons-right">
-                            <input class="input" type="input" placeholder="Street Address">
+                            <input class="input" type="input" placeholder="Street Address"required>
                             <span class="icon is-small is-left">
                                 <i class="fa fa-address-book"></i>
                             </span>
@@ -139,7 +140,7 @@
                             <div class="field">
                                 <label class="label">City</label>
                                 <div class="control">
-                                    <input class="input" type="input" placeholder="City">
+                                    <input class="input" type="input" placeholder="City"required>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +148,7 @@
                             <div class="field">
                                 <label class="label">State</label>
                                 <div class="control">
-                                    <input class="input" type="input" placeholder="State Ex: MA, CT, NJ">
+                                    <input class="input" type="input" placeholder="State Ex: MA, CT, NJ"required>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +156,7 @@
                             <div class="field">
                                 <label class="label">Zip Code</label>
                                 <div class="control">
-                                    <input class="input" type="input" placeholder="Zip Code">
+                                    <input class="input" type="text" pattern="[0-9]{5}" placeholder="Zip Code"required>
                                 </div>
                             </div>
                         </div>
@@ -167,13 +168,13 @@
                           <textarea class="textarea" placeholder="Notes"></textarea>
                         </div>
                       </div>
-
                     <div class="field is-grouped">
                         <div class="control">
                             <button class="button is-link">Update</button>
                             <button class="button is-danger">Cancel</button>
                         </div>
                     </div>
+                </form>
                 </div>
             </div>
         </div>
