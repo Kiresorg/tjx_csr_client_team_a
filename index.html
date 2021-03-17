@@ -1,23 +1,61 @@
 <!doctype html>
  
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
  
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <title>The Maxxinistas</title>
+  <meta name="description" content="Client Side Application">
+  <meta name="author" content="The Maxxinistas">
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/login.css"> 
  
-        <title> Maxxinista Capstone</title>
+</head>
+   
+  <body>
  
-    </head>
+    <section class="hero is-success is-fullheight">
+      <div class="hero-body has-background-grey-lighter">
+          <div class="container has-text-centered">
+              <div class="column is-4 is-offset-4">
+                  <h3 class="title has-text-black">CSR Portal</h3>
+                  <hr class="login-hr">
+                  <p class="subtitle has-text-black">Please login to proceed.</p>
+                  <div class="box">
+                      <figure class="avatar">
+                          <img src="https://www.tjx.com/includes/img/tjx-logo-mobile.svg">
+                      </figure>
+                      <form>
+                          <div class="field">
+                              <div class="control">
+                                  <input id = "email_input" class="input is-large" type="email" placeholder="Your Email" autofocus="">
+                              </div>
+                          </div>
  
-    <body>
+                          <div class="field">
+                              <div class="control">
+                                  <input id = "password_input" class="input is-large" type="password" placeholder="Your Password">
+                              </div>
+                          </div>
+                          <div class="field">
+                              <label class="checkbox">
+                                <input type="checkbox">
+                                    Remember me
+                                </input>
+                              </label>
+                          </div>
+                          <button id = "login_button" class="button is-block is-info is-large is-fullwidth is-dark">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                      </form>
+                  </div>
+                  <p class="has-text-grey">
+                      <a href="../">Create Account</a> &nbsp;·&nbsp;
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src = "./js/login.js"></script>
  
-        <h1>Hello Maxxinistas!!!</h1>>
- 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    </body>
- 
-</html> 
- 
+  </body>
+</html>
