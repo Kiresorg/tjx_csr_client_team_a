@@ -2,18 +2,16 @@
  
 <html lang="en">
 <head>
-  <meta charset="utf-8">
- 
-  <title>20% Maxxinista Capstone</title>
+  <title>Customer Info | CSR Portal</title>
   <meta name="description" content="Client Side Application">
   <meta name="author" content="The 20% Maxxinistas">
-
+  <meta charset="utf-8">
+  
   <!-- Bulma CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
- 
 </head>
    
 <body>
@@ -33,7 +31,7 @@
       
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item">
+            <a href="viewOrders.html" class="navbar-item">
                 Orders
             </a>
       
@@ -41,7 +39,7 @@
                 Customers
             </a>
 
-            <a class="navbar-item">
+            <a href="viewProducts.html" class="navbar-item">
                 Inventory
             </a>
             <form class="navbar-item">
@@ -102,10 +100,63 @@
         <!-- Customer Orders-->
         <section class="section">
           <h2 class="title">Orders</h2>
+          <div class="tile is-ancestor has-background-grey-light">
+            <div class="tile is-vertical is-7">
+                <br>
+                <div class="tile is-parent">
+                    <article class="tile is-child notification has-background-white-bis">
+                        <a class="title" href="https://www.marshalls.com">Order ID</a>
+                        <div class="content">
+                            <br>
+                            <p class="text1">Date Created</p>
+                            <p class="text1">Customer Name</p>
+                            <p class="text1">Order Status</p>
+                        </div>
+                      </article>
+                  </div>
+
+                  <div class="tile is-parent">
+                    <article class="tile is-child notification has-background-white-bis">
+                        <a class="title" href="https://www.sierra.com">Order ID</a>
+                        <div class="content">
+                            <br>
+                            <p class="text1">Date Created</p>
+                            <p class="text1">Customer Name</p>
+                            <p class="text1">Order Status</p>
+                        </div>
+                      </article>
+                  </div>
+
+                  <div class="tile is-parent">
+                    <article class="tile is-child notification has-background-white-bis">
+                        <a class="title" href="https://www.tjmaxx.com">Order ID</a>
+                        <div class="content">
+                            <br>
+                            <p class="text1">Date Created</p>
+                            <p class="text1">Customer Name</p>
+                            <p class="text1">Order Status</p>
+                        </div>
+                      </article>
+                  </div>
+
+                  <div class="tile is-parent">
+                    <article class="tile is-child notification has-background-white-bis">
+                        <a class="title" href="https://www.homegoods.com">Order ID</a>
+                        <div class="content">
+                            <br>
+                            <p class="text1">Date Created</p>
+                            <p class="text1">Customer Name</p>
+                            <p class="text1">Order Status</p>
+                        </div>
+                      </article>
+                  </div>
+
+            </div>
+          </div>
         </section>
 
 
 
-    <script src="js/app.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>
