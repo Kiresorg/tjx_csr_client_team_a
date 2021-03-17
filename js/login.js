@@ -6,8 +6,7 @@ function loginEvent(){
     let loginInfo = {}
     loginInfo.email = document.getElementById("email_input").value;
     loginInfo.password = document.getElementById("password_input").value;
-    console.log(loginInfo);
+    window.alert(loginInfo.email + " " + loginInfo.password);
     document.getElementById("email_input").value = "";
     document.getElementById("password_input").value ="";
-
 }
