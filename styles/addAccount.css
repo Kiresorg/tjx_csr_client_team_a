@@ -1,0 +1,26 @@
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+.seperate{
+    padding-left: 15%;
+}
+.center {
+    margin: auto;
+    top: 50px;
+    width: 50%;
+    height: 50%;
+    border: black 3px solid;
+    padding: 1rem;
+}
+
+#rectangle {
+    width: 800px;
+    height: 800px;
+    border-style: solid;
+    background: transparent;
+    border-color: black;
+}
