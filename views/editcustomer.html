@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-      </nav>
+    </nav>
     <section class="hero is-success is-fullheight">
         <div class="hero-body has-background-grey-lighter">
             <div class="column is-4 is-offset-4">
@@ -75,31 +75,31 @@
                     <div class="field">
                         <label class="label">First Name</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input id ="firstName_input" class="input" type="text" placeholder="First Name">
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Middle Name</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Middle Name">
+                            <input id = "middleName_input" class="input" type="text" placeholder="Middle Name">
                         </div>
                     </div>
                     <div class="field">
                             <label class="label">Last Name</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input id = "lastName_input" class="input" type="text" placeholder="Last Name">
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Phone Number</label>
                     <div class="control">
-                        <input class="input" type="tel" placeholder="Phone Number">
+                        <input id = "phoneNumber_input" class="input" type="tel" placeholder="Phone Number">
                     </div>
                 </div>
                     <div class="field">
                         <label class="label">Email</label>
                         <div class="control has-icons-left has-icons-right">
-                            <input class="input" type="email" placeholder="Email input"></input>
+                            <input id = "email_input" class="input" type="email" placeholder="Email input"></input>
                             <span class="icon is-small is-left">
                                 <i class="fa fa-envelope"></i>
                             </span>
@@ -108,7 +108,7 @@
                     <div class="field">
                         <label class="label">Street Address</label>
                         <div class="control has-icons-left has-icons-right">
-                            <input class="input" type="input" placeholder="Street Address">
+                            <input id = "address1_input" class="input" type="input" placeholder="Street Address">
                             <span class="icon is-small is-left">
                                 <i class="fa fa-address-book"></i>
                             </span>
@@ -117,7 +117,7 @@
                     <div class="field">
                         <label class="label">Address Line 2</label>
                         <div class="control has-icons-left has-icons-right">
-                            <input class="input" type="input" placeholder="Address Line 2">
+                            <input id = "address2_input" class="input" type="input" placeholder="Address Line 2">
                             <span class="icon is-small is-left">
                                 <i class="fa fa-address-book"></i>
                             </span>
@@ -128,7 +128,7 @@
                             <div class="field">
                                 <label class="label">City</label>
                                 <div class="control">
-                                    <input class="input" type="input" placeholder="City">
+                                    <input id = "city_input" class="input" type="input" placeholder="City">
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                             <div class="field">
                                 <label class="label">State</label>
                                 <div class="control">
-                                    <input class="input" type="input" placeholder="State Ex: MA, CT, NJ">
+                                    <input id = "state_input" class="input" type="input" placeholder="State Ex: MA, CT, NJ">
                                 </div>
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                             <div class="field">
                                 <label class="label">Zip Code</label>
                                 <div class="control">
-                                    <input class="input" type="input" placeholder="Zip Code">
+                                    <input id = "zipcode_input" class="input" type="input" placeholder="Zip Code">
                                 </div>
                             </div>
                         </div>
@@ -153,18 +153,20 @@
                     <div class="field">
                         <label class="label">Customer Notes</label>
                         <div class="control">
-                          <textarea class="textarea" placeholder="Notes"></textarea>
+                          <textarea id="customerNotes_input" class="textarea" placeholder="Notes"></textarea>
                         </div>
                       </div>
 
                     <div class="field is-grouped">
                         <div class="control">
-                            <button class="button is-link">Update</button>
+                            <button id = "update_button" class="button is-link">Update</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src = "../js/editCustomer.js"></script>
   </body>
 </html>
