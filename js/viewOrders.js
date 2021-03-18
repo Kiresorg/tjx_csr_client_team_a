@@ -58,12 +58,11 @@ async function getAll() {
 
         html += '<div class="tile is-parent">';
         html += '<article class="tile is-child box">';
-        html += '<a class="title" href="https://www.marshalls.com">Order ID: ' + data[i].id + '</a>';
+        html += '<a class="title" href="./editOrder.html">Order ID: ' + data[i].id + '</a>';
         html += '<div class="content"> <br>';
         html += '<p class="text1">Date Created: ' + sqlToJsDate(data[i].datetime_order_placed) + '</p>';
         html += '<p class="text1"> Order Status: ' + order_status + '</p>';
         html += '<p class="text1"> Total Price: ' + data[i].total_order_price +  '</p><br>';
-        html += '<button class="button is-info">Add Product</button>';
         html += '</div>';
         html += '</article>';
         html += '</div>';
