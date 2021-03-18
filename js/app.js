@@ -116,17 +116,18 @@ return response.data;
 
 async function getProduct() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/product/:id",
+	url: "http://csr-api-a.azurewebsites.net/api/products/1",
 	method: "GET"
 })
-console.log(response.data)
+//console.log(response.data)
+return response.data
 }
 
 //--------------------------------------------------------------------------------
 
 async function updateProduct() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/product/:id",
+	url: "http://csr-api-a.azurewebsites.net/api/products/:id",
 	method: "PUT"
 })
 console.log(response.data)
