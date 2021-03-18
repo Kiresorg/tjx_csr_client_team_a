@@ -61,22 +61,22 @@ function checkInputs(){
 
 
 function updateCustomer(){
-    let customerObj = {};
-    customerObj.first_name = $("#firstName_input").val();
-    customerObj.middle_name=$("#middleName_input").val();
-    customerObj.last_name=$("#lastName_input").val();
-    customerObj.phone=$("#phoneNumber_input").val();
-    customerObj.email=$("#email_input").val();
-    customerObj.notes=$("#email_input").val();
-    customerObj.address_line1=$("#address1_input").val();
-    customerObj.address_line2=$("#address2_input").val();
-    customerObj.city=$("#city_input").val();
-    customerObj.state=$("#state_input").val();
-    customerObj.zip=$("#zipcode_input").val();
-    
-    console.log("this is customer's old info: "); console.log(dummyData);
-    console.log("this is customer's new info: "); console.log(customerObj);
+    let custEdit = {
+        "first_name": $("#firstName_input").val(),
+        "middle_name": $("#middleName_input").val(),
+        "last_name": $("#lastName_input").val(),
+        "phone": $("#phoneNumber_input").val(),
+        "email": $("#email_input").val(),
+        "notes": $("#notes_input").val(),
+        "address_line1": $("#address1_input").val(),
+        "address_line2": $("#address2_input").val(),
+        "city": $("#city_input").val(),
+        "state": $("#state_input").val(),
+        "zip": $("#zipcode_input").val()
 
-   modifyCustomer(1, customerObj);
+    }
 
+
+
+    modifyCustomer(1, custEdit);
 }
