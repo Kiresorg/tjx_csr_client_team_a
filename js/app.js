@@ -52,13 +52,17 @@ console.log(response.data)
 //--------------------------------------------------------------------------------
 //CUSTOMERS
 
-async function createCustomer(custBody) {
-	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customers",
-	method: "POST"
-})
-console.log(response.data)
+
+async function createCustomer(body) {
+	// const response = await axios ({
+	// url: "http://csr-api-a.azurewebsites.net/api/customer",
+	// method: "POST"
+	const response = await axios.post('http://csr-api-a.azurewebsites.net/api/customers', body);
+	console.log("HELLO");
+	console.log(response.data);
+
 }
+
 
 //--------------------------------------------------------------------------------
 
@@ -69,6 +73,7 @@ async function getAllCustomers() {
 })
 return response.data;
 }
+
 
 //--------------------------------------------------------------------------------
 
