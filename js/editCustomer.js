@@ -1,7 +1,7 @@
 //JQuery for click event on button
-$("#submit_button").on('click', updateCustomer);
+$("#update_button").on('click', updateCustomer);
  //disable the button
- $("#submit_button").prop('disabled', true);
+// $("#update_button").prop('disabled', true);
 //jquery event listeners to check each input, in order to enable the button
 $("#firstName_input").on('input', checkInputs);
 $("#lastName_input").on('input', checkInputs);
@@ -77,6 +77,6 @@ function updateCustomer(){
     console.log("this is customer's old info: "); console.log(dummyData);
     console.log("this is customer's new info: "); console.log(customerObj);
 
-   modifyCustomer(customerObj,1);
+   modifyCustomer(1, customerObj);
 
 }

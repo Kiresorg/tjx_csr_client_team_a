@@ -9,7 +9,7 @@ async function getAllOrders() {
 	method: "GET"
 })
 
-console.log(response.data)
+return response.data;
 }
 
 //--------------------------------------------------------------------------------
@@ -83,13 +83,19 @@ console.log(response.data)
 //--------------------------------------------------------------------------------
 
 async function modifyCustomer(id, body) {
+
 	const response = await axios ({
-	url: `http://csr-api-a.azurewebsites.net/api/customer/${id}`,
+	url: `http://csr-api-a.azurewebsites.net/api/customers/${id}`,
+	"Content-Type": "application/json",
 	method: "PUT",
 	body: body
+
 })
 console.log(response.data)
 }
+/*const response = await axios.put(`http://csr-api-a.azurewebsites.net/api/customers/${id}`, body);
+	console.log(response.data);
+}*/
 
 //--------------------------------------------------------------------------------
 
@@ -106,10 +112,10 @@ console.log(response.data)
 
 async function getAllProducts() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/product",
+	url: "https://csr-api-a.azurewebsites.net/api/products/",
 	method: "GET"
 })
-console.log(response.data)
+return response.data;
 }
 
 //--------------------------------------------------------------------------------
