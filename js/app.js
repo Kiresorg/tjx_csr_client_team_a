@@ -114,9 +114,9 @@ return response.data;
 
 //--------------------------------------------------------------------------------
 
-async function getProduct() {
+async function getProduct(id) {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/products/1",
+	url: `http://csr-api-a.azurewebsites.net/api/products/${id}`,
 	method: "GET"
 })
 //console.log(response.data)

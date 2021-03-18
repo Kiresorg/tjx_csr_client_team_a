@@ -1,3 +1,8 @@
+function loadPage(id) {
+    localStorage.setItem("productId", id);
+    window.location = 'productDescription.html';
+}
+
 $( document ).ready(function() {
     getAll();
 });
@@ -5,14 +10,14 @@ $( document ).ready(function() {
 async function getAll() {
     var data = await getAllProducts();
     console.log(data);
-
     
     var html = '';
+    
 
     for(var i = 0; i< data.length; i++) {
         html += '<div class="tile is-parent">';
         html += '<article class="tile is-child notification has-background-white-bis">';
-        html += '<a class="title" href="https://www.marshalls.com">' + data[i].name + '</a>';
+        html += '<a class="title" onclick=' + `loadPage(${data[i].id})` + '>' + data[i].name + '</a>';
         html += '<div class="content"> <br>';
         html += '<p class="text1">SKU : ' + data[i].sku + '</p>';
         html += '<p class="text1"> Quantity: ' + data[i].quantity + '</p>';
