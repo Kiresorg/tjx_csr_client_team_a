@@ -9,3 +9,4 @@ function saveDraft(){
 function addProducts(){
     console.log("Post new order to the database and route to the products page");
 }
+get

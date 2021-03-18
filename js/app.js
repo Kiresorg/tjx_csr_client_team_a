@@ -1,4 +1,4 @@
-const axios = require("axios");
+//const axios = require("axios");
 
 //--------------------------------------------------------------------------------
 //ORDERS
@@ -66,11 +66,8 @@ console.log(response.data)
 //--------------------------------------------------------------------------------
 
 async function getAllCustomers() {
-	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customer",
-	method: "GET"
-})
-console.log(response.data)
+	const response = await axios.post('http://csr-api-a.azurewebsites.net/api/orders', body);
+	console.log(response.data);
 }
 
 //--------------------------------------------------------------------------------
@@ -85,10 +82,11 @@ console.log(response.data)
 
 //--------------------------------------------------------------------------------
 
-async function modifyCustomer() {
+async function modifyCustomer(id, body) {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customer/:id",
-	method: "PUT"
+	url: `http://csr-api-a.azurewebsites.net/api/customer/${id}`,
+	method: "PUT",
+	body: body
 })
 console.log(response.data)
 }
