@@ -1,5 +1,3 @@
-//const axios = require("axios");
-
 //--------------------------------------------------------------------------------
 //ORDERS
 
@@ -25,24 +23,8 @@ console.log(response.data)
 //--------------------------------------------------------------------------------
 
 async function createNewOrder(body) {
-	/* const response = await axios ({
-	
-	url: "http://csr-api-a.azurewebsites.net/api/orders",
-	method: "POST",
-	headers: {'Content-Type': 'application/json'},
-	body: JSON.stringify(body) */
 	const response = await axios.post('http://csr-api-a.azurewebsites.net/api/orders', body);
 	console.log(response.data); 
-	
-
-	/*const response = await fetch('http://csr-api-a.azurewebsites.net/api/orders', {
-		method: 'POST', // *GET, POST, PUT, DELETE, etc.
-		headers: {
-		  'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(body) // body data type must match "Content-Type" header
-	  });
-	console.log(response.data);*/
 }
  
 
@@ -83,7 +65,7 @@ console.log(response.data)
 
 async function getAllCustomers() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customer",
+	url: "http://csr-api-a.azurewebsites.net/api/customers",
 	method: "GET"
 })
 console.log(response.data)
@@ -91,9 +73,9 @@ console.log(response.data)
 
 //--------------------------------------------------------------------------------
 
-async function getCustomer() {
+async function getCustomer(id) {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customer/:id",
+	url: `http://csr-api-a.azurewebsites.net/api/customer/${id}`,
 	method: "GET"
 })
 console.log(response.data)
