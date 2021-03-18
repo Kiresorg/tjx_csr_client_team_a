@@ -1,25 +1,23 @@
 <!doctype html>
  
 <html lang="en">
-<head>
-  <meta charset="utf-8">
- 
-  <title>20% Maxxinista Capstone</title>
-  <meta name="description" content="Client Side Application">
-  <meta name="author" content="The 20% Maxxinistas">
+  <head>
+    <title>Main | CSR Portal</title>
+    <meta name="description" content="Client Side Application">
+    <meta name="author" content="The 20% Maxxinistas">
+    <meta charset="utf-8">
+    
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
 
-  <!-- Bulma CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
- 
-</head>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
+  </head>
    
 <body>
     <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="#">
+          <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="main.html">
             CSR Portal
           </a>
       
@@ -32,15 +30,15 @@
       
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item">
+            <a href="viewOrders.html" class="navbar-item">
                 Orders
             </a>
       
-            <a class="navbar-item">
+            <a href="viewCustomers.html" class="navbar-item">
                 Customers
             </a>
 
-            <a class="navbar-item">
+            <a href="viewProducts.html" class="navbar-item">
                 Inventory
             </a>
             <form class="navbar-item">
@@ -51,33 +49,41 @@
           </div>
       
           <div class="navbar-end">
+<<<<<<< HEAD
             <a class="navbar-item">
                 New order
             </a>
       
             <a class="navbar-item">
+=======
+            <a href="newOrder.html" class="navbar-item">
+                New order
+            </a>
+      
+            <a href="createCustomer.html" class="navbar-item">
+>>>>>>> 01914bb59fa314b806f8e32958840ece10386108
                 Create new customer
             </a>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link is-arrowless">
-                    <i class="fas fa-user-circle fa-2x"></i>
-                </a>
+              <a class="navbar-link is-arrowless">
+                  <i class="fas fa-user-circle fa-2x"></i>
+              </a>
         
-                <div class="navbar-dropdown is-right">
-                  <a class="navbar-item">
-                    Settings
-                  </a>
-                  <hr class="navbar-divider">
-                  <a class="navbar-item">
-                    Logout
-                  </a>
-                </div>
+              <div class="navbar-dropdown is-right">
+                <a class="navbar-item">
+                  Settings
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Logout
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </nav>
+    </nav>
 
-    <script src="js/app.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>
