@@ -14,6 +14,28 @@ $("#state_input").on('input', checkInputs);
 $("#zip_input").on('input', checkInputs);
 $("#customerNotes_input").on('input', checkInputs);
 
+// getAllOrders();
+// getAllCustomers();
+
+// dummy = {
+//     "first_name": "Henry",
+//     "middle_name": "",
+//     "last_name": "Jacks",
+//     "phone": "6173781634",
+//     "email": "djbbdw@gmail.com",
+//     "notes": "Hello TJX",
+//     "address_line1": "Street 1",
+//     "address_line2": "Street 2",
+//     "city": "Boston",
+//     "state": "MA",
+//     "zip": "02128"
+// }
+// console.log(dummy)
+
+// createCustomer(dummy);
+
+const x = createCustomer();
+
 
 
 // Check inputs and enable the submit button if correct
@@ -41,20 +63,24 @@ function checkInputs(){
 object and send it to the database. Then re-route to portal home.*/
 function submitAccount(){
     let customerInfo = {}
-    customerInfo.firstName = $("#firstName_input").val();
-    customerInfo.middleName = $("#middleName_input").val();
-    customerInfo.lastName = $("#lastName_input").val();
+    customerInfo["first_name"] = $("#firstName_input").val();
+    customerInfo.middle_name = $("#middleName_input").val();
+    customerInfo.last_name = $("#lastName_input").val();
     customerInfo.email = $("#email_input").val();
     customerInfo.phone =  $("#phone_input").val();
-    customerInfo.address1 =  $("#address1_input").val();
-    customerInfo.address2 = $("#address2input").val();
-    customerInfo.city = $("#cityinput").val();
-    customerInfo.state = $("#stateinput").val();
-    customerInfo.zip = $("#zipinput").val();
-    customerInfo.customerNotes = $("#customerNotes_input").val();
+    customerInfo.address_line1 =  $("#address1_input").val();
+    customerInfo.address_line2 = $("#address2_input").val();
+    customerInfo.city = $("#city_input").val();
+    customerInfo.state = $("#state_input").val();
+    customerInfo.zip = $("#zip_input").val();
+    customerInfo.notes = $("#customerNotes_input").val();
     console.log(customerInfo);
 
-    window.alert(customerInfo);
+    x(customerInfo);
+
+    console.log("hello");
+
+    // window.alert(customerInfo);
 
     
 
