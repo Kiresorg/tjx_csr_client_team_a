@@ -5,9 +5,9 @@
 <head>
   <meta charset="utf-8">
  
-  <title>The Maxxinistas</title>
+  <title>Login | CSR Portal</title>
   <meta name="description" content="Client Side Application">
-  <meta name="author" content="The Maxxinistas">
+  <meta name="author" content="The 20% Maxxinistas">
   <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/login.css"> 
  
@@ -23,7 +23,7 @@
                   <hr class="login-hr">
                   <p class="subtitle has-text-black">Please login to proceed.</p>
                   <div class="box">
-                      <figure class="avatar">
+                      <figure style="margin-bottom: 1em;">
                           <img src="https://www.tjx.com/includes/img/tjx-logo-mobile.svg">
                       </figure>
                       <form>
@@ -45,12 +45,14 @@
                                 </input>
                               </label>
                           </div>
-                          <button id = "login_button" class="button is-block is-info is-large is-fullwidth is-dark">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                          <button id="login_button" class="button is-block is-info is-large is-fullwidth is-dark">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                          
+                          <!-- Temporary by-pass, remove after implementing login. -->
+                          <a href="views/main.html" class="button" style="margin: 10px 0 10px 0;">Temp by-pass</a><br>
+
+                          <a href="views/createAccount.html" class="button">Create Account</a>
                       </form>
                   </div>
-                  <p class="has-text-grey">
-                      <a href="../">Create Account</a> &nbsp;·&nbsp;
-                  </p>
               </div>
           </div>
       </div>
