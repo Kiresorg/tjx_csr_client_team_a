@@ -54,9 +54,8 @@ console.log(response.data)
 
 async function createCustomer(custBody) {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customer",
-	method: "POST",
-	body: custBody
+	url: "http://csr-api-a.azurewebsites.net/api/customers",
+	method: "POST"
 })
 console.log(response.data)
 }
@@ -68,7 +67,7 @@ async function getAllCustomers() {
 	url: "http://csr-api-a.azurewebsites.net/api/customers",
 	method: "GET"
 })
-console.log(response.data)
+return response.data;
 }
 
 //--------------------------------------------------------------------------------
@@ -85,7 +84,7 @@ console.log(response.data)
 
 async function modifyCustomer() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customer/:id",
+	url: "http://csr-api-a.azurewebsites.net/api/customers/:id",
 	method: "PUT"
 })
 console.log(response.data)
@@ -95,7 +94,7 @@ console.log(response.data)
 
 async function deleteSpecificCustomer() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customer/:id",
+	url: "http://csr-api-a.azurewebsites.net/api/customers/:id",
 	method: "DELETE"
 })
 console.log(response.data)
