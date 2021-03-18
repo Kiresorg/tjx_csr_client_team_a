@@ -1,5 +1,3 @@
-// const axios = require("axios");
-
 //--------------------------------------------------------------------------------
 //ORDERS
 
@@ -9,7 +7,7 @@ async function getAllOrders() {
 	method: "GET"
 })
 
-console.log(response.data)
+return response.data;
 }
 
 //--------------------------------------------------------------------------------
@@ -111,10 +109,10 @@ console.log(response.data)
 
 async function getAllProducts() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/product",
+	url: "https://csr-api-a.azurewebsites.net/api/products/",
 	method: "GET"
 })
-console.log(response.data)
+return response.data;
 }
 
 //--------------------------------------------------------------------------------
