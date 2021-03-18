@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+       
+        <title>20% Maxxinista Capstone</title>
+        <meta name="description" content="Client Side Application">
+        <meta name="author" content="The 20% Maxxinistas">
+      
+        <!-- Bulma CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+      
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
+       
+      </head>
+
+   <body>
+
+    <section class="hero is-success is-fullheight has-background-grey-lighter">
+        <form action="/action_pag.php">
+        <div class="hero-body has-background-grey-lighter">
+            <div class="column is-4 is-offset-4">
+                <div class="box">
+                    <h3 class="title has-text-black">New Order</h3>
+                    <label>Fields with '*' are required</label>
+                    <div class="field">
+                        <label class="label">Customer Name *</label>
+                        <div class="control">
+                            <input id ="customerName_input" class="input" type="text" placeholder="Customer Name" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Street Address *</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id = "address1_input" class="input" type="input" placeholder="Street Address" required>
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-address-book"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Address Line 2</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id = "address2_input" class="input" type="input" placeholder="Address Line 2">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-address-book"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class = "columns">
+                        <div class = "column">
+                            <div class="field">
+                                <label class="label">City *</label>
+                                <div class="control">
+                                    <input id ="city_input" class="input" type="input" placeholder="City" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "column">
+                            <div class="field">
+                                <label class="label">State *</label>
+                                <div class="control">
+                                    <input id = "state_input" class="input" type="input" placeholder="Ex: MA, NJ, etc" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "column">
+                            <div class="field">
+                                <label  class="label">Zip Code *</label>
+                                <div class="control">
+                                    <input id = "zipcode_input" pattern="[0-9]{5}" class="input" type="input" placeholder="Ex: 02364"required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                    <div class="field">
+                        <label class="label">Customer Notes</label>
+                        <div class="control">
+                          <textarea id = "customerNotes_input" class="textarea" placeholder="Notes"></textarea>
+                        </div>
+                      </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button id = "saveDraft_button" class="button is-warning">Save as Draft</button>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button id = "addProducts_button" class="button is-link">Add Products</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src = "../js/newOrder.js"></script>
+  </body>
+</html>
