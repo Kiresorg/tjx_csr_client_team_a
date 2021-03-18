@@ -1,4 +1,4 @@
-const axios = require("axios");
+//const axios = require("axios");
 
 //--------------------------------------------------------------------------------
 //ORDERS
@@ -24,13 +24,28 @@ console.log(response.data)
 
 //--------------------------------------------------------------------------------
 
-async function createNewOrder() {
-	const response = await axios ({
+async function createNewOrder(body) {
+	/* const response = await axios ({
+	
 	url: "http://csr-api-a.azurewebsites.net/api/orders",
-	method: "POST"
-})
-console.log(response.data)
+	method: "POST",
+	headers: {'Content-Type': 'application/json'},
+	body: JSON.stringify(body) */
+	const response = await axios.post('http://csr-api-a.azurewebsites.net/api/orders', body);
+	console.log(response.data); 
+	
+
+	/*const response = await fetch('http://csr-api-a.azurewebsites.net/api/orders', {
+		method: 'POST', // *GET, POST, PUT, DELETE, etc.
+		headers: {
+		  'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(body) // body data type must match "Content-Type" header
+	  });
+	console.log(response.data);*/
 }
+ 
+
 
 //--------------------------------------------------------------------------------
 
@@ -55,10 +70,11 @@ console.log(response.data)
 //--------------------------------------------------------------------------------
 //CUSTOMERS
 
-async function createCustomer() {
+async function createCustomer(custBody) {
 	const response = await axios ({
 	url: "http://csr-api-a.azurewebsites.net/api/customer",
-	method: "POST"
+	method: "POST",
+	body: custBody
 })
 console.log(response.data)
 }
