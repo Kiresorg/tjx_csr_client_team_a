@@ -30,7 +30,7 @@
       <!-- Local scripts-->
       <script src="../js/app.js"></script>
       <script src="../js/viewCustomers.js"></script>
-  </head>
+ </head>
 
   <body>
     <!--Portal View-->
@@ -44,7 +44,7 @@
         <a
           class="navbar-item"
           style="font-weight: bold; font-size: x-large"
-          href="#"
+          href="main.html"
         >
           CSR Portal
         </a>
@@ -64,11 +64,11 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item"> Orders </a>
+          <a href="viewOrders.html" class="navbar-item"> Orders </a>
 
-          <a class="navbar-item"> Customers </a>
+          <a href="viewCustomers.html" class="navbar-item"> Customers </a>
 
-          <a class="navbar-item"> Inventory </a>
+          <a href="viewProducts.html" class="navbar-item"> Inventory </a>
           <form class="navbar-item">
             <input class="input is-rounded" type="text" placeholder="Search" />
             <button
@@ -82,9 +82,9 @@
         </div>
 
         <div class="navbar-end">
-          <a class="navbar-item"> New order </a>
+          <a href="newOrder.html" class="navbar-item"> New order </a>
 
-          <a class="navbar-item"> Create new customer </a>
+          <a href="createCustomer.html" class="navbar-item"> Create new customer </a>
 
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link is-arrowless">
@@ -105,13 +105,12 @@
 
     <!--Customer Tables Start Here-->
 
-    <div class="tile is-ancestor has-background-grey-light">
       <div class="tile is-vertical is-7">
         <br>
         
         <div id="customerContainer"></div>
 
       </div>
-    </div>
+
   </body>
 </html>

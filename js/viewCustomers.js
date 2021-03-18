@@ -10,7 +10,7 @@ async function getAll() {
 
     for(var i = 0; i< data.length; i++) {
         html += '<div class="tile is-parent">' ;
-        html += '<article class="tile is-child notification has-background-white-bis">' ;
+        html += '<article class="tile is-child box">' ;
 
         html += '<a class="title" href="https://www.sierra.com">' + data[i].first_name + ' ' + data[i].last_name + '</a>' ;
         html += '<br>' ;
