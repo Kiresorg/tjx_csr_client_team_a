@@ -2,9 +2,13 @@ $( document ).ready(function() {
     getAll();
 });
 
+// 2021-03-18T18:12:00.000Z
+
 function sqlToJsDate(sqlDate){
+    var newDate = sqlDate.replace("T", " ");
+    newDate = newDate.substring(0, newDate.length - 2);
     //sqlDate in SQL DATETIME format ("yyyy-mm-dd hh:mm:ss.ms")
-    var sqlDateArr1 = sqlDate.split("-");
+    var sqlDateArr1 = newDate.split("-");
     //format of sqlDateArr1[] = ['yyyy','mm','dd hh:mm:ms']
     var sYear = sqlDateArr1[0];
     var sMonth = (Number(sqlDateArr1[1]) - 1).toString();
@@ -20,6 +24,7 @@ function sqlToJsDate(sqlDate){
     var sSecond = sqlDateArr4[0];
     var sMillisecond = sqlDateArr4[1];
      
+    console.log(newDate);
     return new Date(sYear,sMonth,sDay,sHour,sMinute,sSecond,sMillisecond);
 }
 
@@ -55,7 +60,7 @@ async function getAll() {
         html += '<article class="tile is-child box">';
         html += '<a class="title" href="https://www.marshalls.com">Order ID: ' + data[i].id + '</a>';
         html += '<div class="content"> <br>';
-        html += '<p class="text1">Date Created: ' + data[i].datetime_order_placed + '</p>';
+        html += '<p class="text1">Date Created: ' + sqlToJsDate(data[i].datetime_order_placed) + '</p>';
         html += '<p class="text1"> Order Status: ' + order_status + '</p>';
         html += '<p class="text1"> Total Price: ' + data[i].total_order_price +  '</p><br>';
         html += '<button class="button is-info">Add Product</button>';
