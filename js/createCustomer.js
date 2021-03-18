@@ -52,5 +52,4 @@ function submitAccount(){
     }
 
     createCustomer(customerInfo);
-    window.alert("Customer created! routing back to main.");
 }
