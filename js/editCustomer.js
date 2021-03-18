@@ -1,5 +1,5 @@
 //JQuery for click event on button
-$("#update_button").on('click', updateCustomer);
+$("#update_button").click(updateCustomer);
  //disable the button
 // $("#update_button").prop('disabled', true);
 //jquery event listeners to check each input, in order to enable the button
