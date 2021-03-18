@@ -1,26 +1,40 @@
 
 //JQuery for click event on button
  //disable the button
-// $("#submit_button").prop('disabled', true);
+ $("#submit_button").prop('disabled', true);
 //jquery event listeners to check each input, in order to enable the button
-// $("#firstName_input").on('input', checkInputs);
-// $("#lastName_input").on('input', checkInputs);
-// $("#email_input").on('input', checkInputs);
-// $("#phone_input").on('input', checkInputs);
-// $("#address1_input").on('input', checkInputs);
+$("#firstName_input").on('input', checkInputs);
+$("#lastName_input").on('input', checkInputs);
+$("#email_input").on('input', checkInputs);
+$("#phone_input").on('input', checkInputs);
+$("#address1_input").on('input', checkInputs);
 // $("#address2_input").on('input', checkInputs);
-// $("#city_input").on('input', checkInputs);
-// $("#state_input").on('input', checkInputs);
-// $("#zip_input").on('input', checkInputs);
-// $("#notes_input").on('input', checkInputs);
+$("#city_input").on('input', checkInputs);
+$("#state_input").on('input', checkInputs);
+$("#zip_input").on('input', checkInputs);
+$("#customerNotes_input").on('input', checkInputs);
 
 
 
 // Check inputs and enable the submit button if correct
+//rey -> 3
 function checkInputs(){
-    $("#submit_button").click(submitAccount);
-    $("#submit_button").prop('disabled', false);
+    if($("#firstName_input").val().length > 0 &&
+       $("#lastName_input").val().length > 0 &&
+       $("#email_input").val().length > 0 &&
+       $("#phone_input").val().length > 0 &&
+       $("#address1_input").val().length > 0 &&
+       $("#city_input").val().length > 0 &&
+       $("#state_input").val().length > 0 &&
+       $("#zip_input").val().length > 0 
+    ){
+        $("#submit_button").prop('disabled', false);
+    }
+    // $("#submit_button").click(submitAccount);
+    // $("#submit_button").prop('disabled', false);
 }
+
+
 
 /*when submit button is pressed, gather input info into an
 object and send it to the database. Then re-route to portal home.*/
