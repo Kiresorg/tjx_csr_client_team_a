@@ -1,5 +1,21 @@
+//JQuery for click event on button
+$("#update_button").click(updateCustomer);
+ //disable the button
+// $("#update_button").prop('disabled', true);
+//jquery event listeners to check each input, in order to enable the button
+$("#firstName_input").on('input', checkInputs);
+$("#lastName_input").on('input', checkInputs);
+$("#email_input").on('input', checkInputs);
+$("#phone_input").on('input', checkInputs);
+$("#address1_input").on('input', checkInputs);
+// $("#address2_input").on('input', checkInputs);
+$("#city_input").on('input', checkInputs);
+$("#state_input").on('input', checkInputs);
+$("#zip_input").on('input', checkInputs);
+$("#customerNotes_input").on('input', checkInputs);
+
 //Dummy data to play with, replace with GET for selected customer
-let dummyData = {
+ dummyData = {
     firstName: "Pat",
     middleName: "Thomas",
     lastName: "Kelley",
@@ -11,7 +27,7 @@ let dummyData = {
     state: "MA",
     zip: "01020",
     customerNotes: "Likes purple products"
-};
+}
 
 //populate the inputs with selected customer data
 $("#firstName_input").val(dummyData.firstName);
@@ -26,34 +42,41 @@ $("#state_input").val(dummyData.state);
 $("#zipcode_input").val(dummyData.zip);
 $("#customerNotes_input").val(dummyData.customerNotes);
 
-//Add event listener for the update button
-$("#update_button").on("click", updateCustomer);
 
-//TODO: Add event listener to cancel changes and just return to viewing this customer
-//$("#cancel_button").on("click", updateCustomer);
-
-//TODO: function to check every input to match up with the database
 function checkInputs(){
-
+    if($("#firstName_input").val().length > 0 &&
+       $("#middleName_input").val().length > 0 &&
+       $("#lastName_input").val().length > 0 &&
+       $("#phoneNumber_input").val().length > 0 &&
+       $("#address1_input").val().length > 0 &&
+       $("#address2_input").val().length > 0 &&
+       $("#city_input").val().length > 0 &&
+       $("#state_input").val().length > 0 &&
+       $("#zipcode_input").val().length > 0 &&
+       $("#customerNotes_input").val().length > 0 
+    ){
+        $("#update_button").prop('disabled', false);
+    }
 }
 
-/*function to invoke when button is pressed. The update to customer can only 
-happen if the inputs are correct. A PUT method will be used to update customer
-instead of just logging the updated customers info. The button should also route
-back to the page to view this specific customer*/
+
 function updateCustomer(){
-    let customerObj = {};
-    customerObj.firstName = $("#firstName_input").val();
-    customerObj.middleName=$("#middleName_input").val();
-    customerObj.lastName=$("#lastName_input").val();
-    customerObj.phoneNumber=$("#phoneNumber_input").val();
-    customerObj.email=$("#email_input").val();
-    customerObj.address1=$("#address1_input").val();
-    customerObj.address2=$("#address2_input").val();
-    customerObj.city=$("#city_input").val();
-    customerObj.state=$("#state_input").val();
-    customerObj.zipcode=$("#zipcode_input").val();
-    customerObj.customerNotes=$("#customerNotes_input").val();
-    console.log("this is customer's old info: "); console.log(dummyData);
-    console.log("this is customer's new info: "); console.log(customerObj);
+    let custEdit = {
+        "first_name": $("#firstName_input").val(),
+        "middle_name": $("#middleName_input").val(),
+        "last_name": $("#lastName_input").val(),
+        "phone": $("#phoneNumber_input").val(),
+        "email": $("#email_input").val(),
+        "notes": $("#notes_input").val(),
+        "address_line1": $("#address1_input").val(),
+        "address_line2": $("#address2_input").val(),
+        "city": $("#city_input").val(),
+        "state": $("#state_input").val(),
+        "zip": $("#zipcode_input").val()
+
+    }
+
+
+
+    modifyCustomer(1, custEdit);
 }
