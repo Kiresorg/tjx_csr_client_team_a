@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
        
-        <title>20% Maxxinista Capstone</title>
+        <title>New Order | CSR Portal</title>
         <meta name="description" content="Client Side Application">
         <meta name="author" content="The 20% Maxxinistas">
       
@@ -36,7 +36,7 @@
                 Orders
             </a>
       
-            <a class="navbar-item">
+            <a href="viewCustomers.html" class="navbar-item">
                 Customers
             </a>
 
@@ -51,11 +51,11 @@
           </div>
       
           <div class="navbar-end">
-            <a class="navbar-item">
+            <a href="newOrder.html" class="navbar-item">
                 New order
             </a>
       
-            <a class="navbar-item">
+            <a href="createCustomer.html" class="navbar-item">
                 Create new customer
             </a>
 
@@ -81,16 +81,27 @@
     <script src="../js/app.js"></script>
 
     <section class="hero is-success is-fullheight has-background-grey-lighter">
-        <form action="/action_pag.php">
         <div class="hero-body has-background-grey-lighter">
             <div class="column is-4 is-offset-4">
                 <div class="box">
                     <h3 class="title has-text-black">New Order</h3>
                     <label>Fields with '*' are required</label>
                     <div class="field">
-                        <label class="label">Customer Name *</label>
+                        <label class="label">First Name *</label>
                         <div class="control">
-                            <input id ="customerName_input" class="input" type="text" placeholder="Customer Name" required>
+                            <input id ="firstName_input" class="input" type="text" placeholder="Customer Name" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Middle Name</label>
+                        <div class="control">
+                            <input id ="middleName_input" class="input" type="text" placeholder="Customer Name">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Last Name *</label>
+                        <div class="control">
+                            <input id ="lastName_input" class="input" type="text" placeholder="Customer Name" required>
                         </div>
                     </div>
                     <div class="field">
@@ -147,20 +158,21 @@
 
                     <div class="field is-grouped">
                         <div class="control">
-                            <button id = "saveDraft_button" class="button is-warning">Save as Draft</button>
+                            <a href = "main.html" id = "saveDraft_button" class="button is-warning">Save as Draft</a>
                         </div>
                     </div>
                     <div class="field is-grouped">
                         <div class="control">
-                            <button id = "addProducts_button" class="button is-link">Add Products</button>
+                            <a href = "viewProducts.html" id = "addProducts_button" class="button is-link" >Add Products</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
     </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src = "../js/app.js"></script>
     <script src = "../js/newOrder.js"></script>
   </body>
 </html>

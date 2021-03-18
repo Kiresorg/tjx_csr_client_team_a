@@ -19,22 +19,15 @@ async function getAll() {
         html += '<article class="tile is-child notification has-background-white-bis">';
         html += '<a class="title" onclick=' + `loadPage(${data[i].id})` + '>' + data[i].name + '</a>';
         html += '<div class="content"> <br>';
-        html += '<p class="text1">SKU : ' + data[i].sku + '</p>';
+        html += '<p class="text1">SKU: ' + data[i].sku + '</p>';
         html += '<p class="text1"> Quantity: ' + data[i].quantity + '</p>';
         html += '<p class="text1"> Price: ' + data[i].unit_price +  '</p><br>';
-        html += '<button class="button is-success">Add Product</button>';
+        html += '<button class="button is-info">Add Product</button>';
         html += '</div>';
         html += '</article>';
         html += '</div>';
     }
 
-    // $.each(data, function(key, value){
-    //     html += '<div class="tile is-parent">';
-    //     html += '<article class="tile is-child notification has-background-white-bis">';
-    //     html += '<a class="title" href="https://www.marshalls.com">' + value.name + '</a>'
-
-
-    // });
 $('#productsContainer').html(html);
 
 
@@ -50,7 +43,7 @@ $('#productsContainer').html(html);
     //         <button class="button is-success">Add Product</button>
     //     </div>
     //   </article>
-  //</div>
+    // </div>
 
 
 
