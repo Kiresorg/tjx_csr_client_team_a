@@ -1,4 +1,4 @@
-const axios = require("axios");
+// const axios = require("axios");
 
 //--------------------------------------------------------------------------------
 //ORDERS
@@ -72,6 +72,7 @@ async function getAllCustomers() {
 })
 console.log(response.data)
 }
+
 
 //--------------------------------------------------------------------------------
 

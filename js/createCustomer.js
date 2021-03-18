@@ -29,6 +29,7 @@ function checkInputs(){
        $("#zip_input").val().length > 0 
     ){
         $("#submit_button").prop('disabled', false);
+        $("#submit_button").click(submitAccount);
     }
     // $("#submit_button").click(submitAccount);
     // $("#submit_button").prop('disabled', false);
@@ -39,15 +40,26 @@ function checkInputs(){
 /*when submit button is pressed, gather input info into an
 object and send it to the database. Then re-route to portal home.*/
 function submitAccount(){
-    // let loginInfo = {}
-    // loginInfo.firstName = $("#firstName_input").value;
-    // loginInfo.lastName = $("#lastName_input").value;
-    // loginInfo.email = $("#email_input").value;
+    let customerInfo = {}
+    customerInfo.firstName = $("#firstName_input").val();
+    customerInfo.middleName = $("#middleName_input").val();
+    customerInfo.lastName = $("#lastName_input").val();
+    customerInfo.email = $("#email_input").val();
+    customerInfo.phone =  $("#phone_input").val();
+    customerInfo.address1 =  $("#address1_input").val();
+    customerInfo.address2 = $("#address2input").val();
+    customerInfo.city = $("#cityinput").val();
+    customerInfo.state = $("#stateinput").val();
+    customerInfo.zip = $("#zipinput").val();
+    customerInfo.customerNotes = $("#customerNotes_input").val();
+    console.log(customerInfo);
 
+    window.alert(customerInfo);
+
+    
 
     //TODO: Will add a post to create the account
     //Arbitrary actions before button is linked to database
-    window.alert("account created!")
     // $("#firstName_input").val('');
     // $("#lastName_input").val('');
     // $("#email_input").val('');
