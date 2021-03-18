@@ -24,13 +24,12 @@ console.log(response.data)
 
 //--------------------------------------------------------------------------------
 
-async function createNewOrder() {
-	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/orders",
-	method: "POST"
-})
-console.log(response.data)
+async function createNewOrder(body) {
+	const response = await axios.post('http://csr-api-a.azurewebsites.net/api/orders', body);
+	console.log(response.data); 
 }
+ 
+
 
 //--------------------------------------------------------------------------------
 
@@ -55,26 +54,34 @@ console.log(response.data)
 //--------------------------------------------------------------------------------
 //CUSTOMERS
 
-async function createCustomer() {
-	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customer",
-	method: "POST"
-})
-console.log(response.data)
+
+async function createCustomer(body) {
+	// const response = await axios ({
+	// url: "http://csr-api-a.azurewebsites.net/api/customer",
+	// method: "POST"
+	const response = await axios.post('http://csr-api-a.azurewebsites.net/api/customers', body);
+	console.log("HELLO");
+	console.log(response.data);
+
 }
+
 
 //--------------------------------------------------------------------------------
 
 async function getAllCustomers() {
-	const response = await axios.post('http://csr-api-a.azurewebsites.net/api/orders', body);
-	console.log(response.data);
+	const response = await axios ({
+	url: "http://csr-api-a.azurewebsites.net/api/customers",
+	method: "GET"
+})
+return response.data;
 }
+
 
 //--------------------------------------------------------------------------------
 
-async function getCustomer() {
+async function getCustomer(id) {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customer/:id",
+	url: `http://csr-api-a.azurewebsites.net/api/customer/${id}`,
 	method: "GET"
 })
 console.log(response.data)
@@ -85,11 +92,9 @@ console.log(response.data)
 async function modifyCustomer(id, body) {
 
 	const response = await axios ({
-	url: `http://csr-api-a.azurewebsites.net/api/customers/${id}`,
-	"Content-Type": "application/json",
-	method: "PUT",
-	body: body
-
+	//url: `http://csr-api-a.azurewebsites.net/api/customers/${id}`,
+	url: `http://localhost:3000/api/customers/${id}`,
+	method: "POST"
 })
 console.log(response.data)
 }
@@ -101,7 +106,7 @@ console.log(response.data)
 
 async function deleteSpecificCustomer() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customer/:id",
+	url: "http://csr-api-a.azurewebsites.net/api/customers/:id",
 	method: "DELETE"
 })
 console.log(response.data)
