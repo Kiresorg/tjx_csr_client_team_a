@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Registeration | CSR Portal</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+      </head>
+    <body>
+    <section class="hero is-success is-fullheight">
+        <div class="hero-body has-background-grey-lighter">
+            <div class="column is-4 is-offset-4">
+                <div class="box">
+                    <div class="field">
+                        <label class="label">First Name</label>
+                        <div class="control">
+                            <input id = "firstName_input" class="input" type="text" placeholder="First Name"></input>
+                        </div>
+                    </div>
+                    <div class="field">
+                            <label class="label">Last Name</label>
+                        <div class="control">
+                            <input id ="lastName_input" class="input" type="text" placeholder="Last Name"></input>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id = "email_input" class="input" type="email" placeholder="Email input"></input>
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id = "password_input" class="input" type="password" placeholder="Password"></input>
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Re-Enter Password</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id ="password2_input" class="input" type="password" placeholder="Re-Enter Password"></input>
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input id = "tc_box" type="checkbox">
+                                I agree to the <a href="#">terms and conditions</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button id = "submit_button" class="button is-link">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src = "../js/createAccount.js"></script>
+  </body>
+</html>
