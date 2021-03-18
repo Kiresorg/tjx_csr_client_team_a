@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Register Page</title>
+      <title>Create Customer | CSR Portal </title>
       <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
@@ -11,7 +11,7 @@
    <body>
     <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="#">
+          <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="main.html">
             CSR Portal
           </a>
       
@@ -24,15 +24,15 @@
       
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item">
+            <a href="viewOrders.html" class="navbar-item">
                 Orders
             </a>
       
-            <a class="navbar-item">
+            <a href="viewCustomers.html" class="navbar-item">
                 Customers
             </a>
 
-            <a class="navbar-item">
+            <a href="viewProducts.html" class="navbar-item">
                 Inventory
             </a>
             <form class="navbar-item">
@@ -43,11 +43,11 @@
           </div>
       
           <div class="navbar-end">
-            <a class="navbar-item">
+            <a href="newOrder.html" class="navbar-item">
                 New order
             </a>
       
-            <a class="navbar-item">
+            <a href="createCustomer.html" class="navbar-item">
                 Create new customer
             </a>
 
@@ -74,7 +74,7 @@
             <div class="column is-4 is-offset-4">
                 <div class="box">
                     <h4 class="title is-4 has-text-black">New Customer</h4>
-                    <form action="/action_page.php">
+                    <form>
                     <div class="field">
                         <label class="label">First Name</label>
                         <div class="control">
@@ -164,8 +164,8 @@
                       </div>
                     <div class="field is-grouped">
                         <div class="control">
-                            <button id = "submit_button" class="button is-link">Update</button>
-                            <button class="button is-danger">Cancel</button>
+                            <a href = "main.html" id = "submit_button" class="button is-link">Update</a>
+                            <a href = "main.html" id = "cancel_button" class = "button is-danger">Cancel</a>
                         </div>
                     </div>
                 </form>
@@ -174,6 +174,8 @@
         </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src = "../js/app.js"></script>
     <script src = "../js/createCustomer.js"></script>
   </body>
 </html>
