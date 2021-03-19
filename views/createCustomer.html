@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Create Customer | CSR Portal </title>
+      <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
+    </head>
+   <body>
+    <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="main.html">
+            CSR Portal
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="viewOrders.html" class="navbar-item">
+                Orders
+            </a>
+      
+            <a href="viewCustomers.html" class="navbar-item">
+                Customers
+            </a>
+
+            <a href="viewProducts.html" class="navbar-item">
+                Inventory
+            </a>
+            <form class="navbar-item">
+                <input class="input is-rounded" type="text" placeholder="Search">
+                <button class="button is-small is-info is-rounded" style="margin-left: 10px;" type="submit"><i class="fas fa-search fa-md"></i></button>
+            </form>
+            
+          </div>
+      
+          <div class="navbar-end">
+            <a href="newOrder.html" class="navbar-item">
+                New order
+            </a>
+      
+            <a href="createCustomer.html" class="navbar-item">
+                Create new customer
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <i class="fas fa-user-circle fa-2x"></i>
+                </a>
+        
+                <div class="navbar-dropdown is-right">
+                  <a class="navbar-item">
+                    Settings
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item">
+                    Logout
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <section class="hero is-success is-fullheight">
+        <div class="hero-body has-background-grey-lighter">
+            <div class="column is-4 is-offset-4">
+                <div class="box">
+                    <h3 class="title has-text-black">Create New Customer</h3>
+                    <form>
+                    <div class="field">
+                        <label class="label">First Name</label>
+                        <div class="control">
+                            <input id  = "firstName_input" class="input" type="text" placeholder="First Name" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Middle Name</label>
+                        <div class="control">
+                            <input id = "middleName_input" class="input" type="text" placeholder="Middle Name">
+                        </div>
+                    </div>
+                    <div class="field">
+                            <label class="label">Last Name</label>
+                        <div class="control">
+                            <input class="input" id = "lastName_input" type="text" placeholder="Last Name"required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Phone Number</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input" type="tel" pattern="[0-9]{10}" id = "phone_input" placeholder="Phone Number"required>
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-phone"></i>
+                        </span>
+                    </div>
+                </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" id = "email_input" placeholder="Email input"required>
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Street Address</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" type="input" id = "address1_input" placeholder="Street Address"required>
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-address-book"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Address Line 2</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id = "address2_input" class="input" id = "address2_input" type="input" placeholder="Address Line 2">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-address-book"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class = "columns">
+                        <div class = "column">
+                            <div class="field">
+                                <label class="label">City</label>
+                                <div class="control">
+                                    <input class="input" type="input" id = "city_input" placeholder="City"required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "column">
+                            <div class="field">
+                                <label class="label">State</label>
+                                <div class="control">
+                                    <input class="input" id = "state_input" type="input" placeholder="State Ex: MA, CT, NJ" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "column">
+                            <div class="field">
+                                <label class="label">Zip Code</label>
+                                <div class="control">
+                                    <input class="input" type="text" id = "zip_input"  placeholder="Zip Code" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                    <div class="field">
+                        <label class="label">Customer Notes</label>
+                        <div class="control">
+                          <textarea id="customerNotes_input" class="textarea" placeholder="Notes"></textarea>
+                        </div>
+                      </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <a href="customerinfo.html" id = "submit_button" class="button is-link">Create</a>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src = "../js/app.js"></script>
+    <script src = "../js/createCustomer.js"></script>
+  </body>
+</html>
