@@ -1,5 +1,5 @@
 # TJX Training Program Capstone Project
- !["mainPortal"](./pictures/portalPage.png "mainPortal")
+ !["mainPortal"](./pictures/portalPage.PNG "mainPortal")
 ## Description
 * Project: Create an "Order Tracking" application
     - Application purpose: Amplifying the productivity of TJX customer service representatives with an efficient CSR portal to best serve customers calling in. Customers will be able to place orders, edit orders, edit their info, or ask about availability of specific products through the CSR using the web application.
@@ -30,7 +30,7 @@
 * Backend 
     - Express/Node.js
     - API endpoints allowed us to get both individual orders/customers/products, as well as ALL orders/customers/products from the database, and then create new orders/customers/products that are then populated into the database
-    - ![API Flow](./pictures/API_flow.png "API Flow")
+    - ![API Flow](./pictures/API_flow.PNG "API Flow")
 * Database
     - MySQL Database
     - ![Database ERD](./pictures/ERD.png "Database ERD")
