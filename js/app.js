@@ -14,18 +14,18 @@ async function getAllOrders() {
 	url: api_url + "/api/orders",
 	method: "GET"
 })
-
+console.log(response.data);
 return response.data;
 }
 
 //--------------------------------------------------------------------------------
 
-async function getOrder() {
+async function getOrder(id) {
 	const response = await axios ({
-	url: api_url + "/api/orders/:id",
+	url: api_url + `/api/orders/${id}`,
 	method: "GET"
 })
-console.log(response.data)
+return response.data;
 }
 
 //--------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ return response.data;
 
 async function getProduct(id) {
 	const response = await axios ({
-	url: api_url + "/api/product/:id",
+	url: api_url + `/api/products/${id}`,
 	method: "GET"
 })
 //console.log(response.data)
@@ -137,7 +137,7 @@ return response.data
 
 async function updateProduct() {
 	const response = await axios ({
-	url: api_url + "/api/product/:id",
+	url: api_url + "/api/products/:id",
 
 	method: "PUT"
 })
