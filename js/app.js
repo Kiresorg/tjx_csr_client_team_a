@@ -5,7 +5,7 @@
 
 async function getAllOrders() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/orders",
+	url: "https://csr-api-a.azurewebsites.net/api/orders",
 	method: "GET"
 })
 
