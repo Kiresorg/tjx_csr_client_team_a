@@ -12,7 +12,7 @@ async function getAll() {
         html += '<div class="tile is-parent">' ;
         html += '<article class="tile is-child box">' ;
 
-        html += '<a class="title" href="https://www.sierra.com">' + data[i].first_name + ' ' + data[i].last_name + '</a>' ;
+        html += '<a class="title" href="./customerinfo.html">' + data[i].first_name + ' ' + data[i].last_name + '</a>' ;
         html += '<br>' ;
         html += '<br>' ;
         html += '<p class="text1">Phone Number: ' + data[i].phone + '</p>' ;

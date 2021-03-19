@@ -34,7 +34,6 @@ function saveDraft(){
         "notes": $("#customerNotes_input").val()
     }
     createNewOrder(newOrder);
-    window.alert("Draft saved");
     console.log('POST new order to the database and route back to home portal page');
 }
 
@@ -47,7 +46,6 @@ function addProducts(){
         "notes": $("#customerNotes_input").val()
     }
     createNewOrder(newOrder);
-    window.alert("Going to add products to this order");
     console.log("Post new order to the database and route to the products page");
 }
 

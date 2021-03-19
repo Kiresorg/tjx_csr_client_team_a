@@ -3,7 +3,6 @@
 $("#submit_button").click(submitAccount);
 $("#cancel_button").click(function(){window.alert('Cancelled creating this customer. Routing back to main portal!')});
 
-
 //jquery event listeners to check each input, in order to enable the button
 $("#firstName_input").on('input', checkInputs);
 $("#lastName_input").on('input', checkInputs);
@@ -15,8 +14,6 @@ $("#city_input").on('input', checkInputs);
 $("#state_input").on('input', checkInputs);
 $("#zip_input").on('input', checkInputs);
 $("#customerNotes_input").on('input', checkInputs);
-
-
 
 function checkInputs(){
     if($("#firstName_input").val().length > 0 &&
@@ -52,5 +49,4 @@ function submitAccount(){
     }
 
     createCustomer(customerInfo);
-    window.alert("Customer created! routing back to main.");
 }
