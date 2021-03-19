@@ -9,6 +9,7 @@ async function getAll() {
     var html = '';
 
     for(var i = 0; i< data.length; i++) {
+        html += '<li>';
         html += '<div class="tile is-parent">' ;
         html += '<article class="tile is-child box">' ;
 
@@ -21,6 +22,7 @@ async function getAll() {
         html += '</div>' ;
         html += '</article>' ;
         html += '</div>' ;
+        html += '</li>';
 
     
     
