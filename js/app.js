@@ -122,12 +122,13 @@ return response.data;
 
 //--------------------------------------------------------------------------------
 
-async function getProduct() {
+async function getProduct(id) {
 	const response = await axios ({
 	url: api_url + "/api/product/:id",
 	method: "GET"
 })
-console.log(response.data)
+//console.log(response.data)
+return response.data
 }
 
 //--------------------------------------------------------------------------------
@@ -135,6 +136,7 @@ console.log(response.data)
 async function updateProduct() {
 	const response = await axios ({
 	url: api_url + "/api/product/:id",
+
 	method: "PUT"
 })
 console.log(response.data)
