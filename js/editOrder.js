@@ -53,14 +53,35 @@ async function getOrderDescription(id) {
         }
         */
         html += '<div class="box">';
-        html += '<h3 class="title has-text-black">Edit Order</h3>';
+        html += '<h3 class="title has-text-centered has-text-black">Edit Order</h3>';
         html += '<div class="content">'
-        html += '<p class="title" style = "color: inherit;">Order ID: ' + data.id + '</p>';
+        html += '<p class="text1" style = "color: inherit;">Order ID: ' + data.id + '</p>';
         html += '<p class="text1">Date Created: ' + sqlToJsDate(data.datetime_order_placed) + '</p>';
         html += '<p class="text1">  Price: ' + data.total_order_price +  '</p><br>';
         html += '</div>';
         html += '</article>';
+
+
+        html += '<div class="dropdown is-hoverable">';
+        html += '<div class="dropdown-trigger">';
+        html += '<button class="button" aria-haspopup="true" aria-controls="dropdown-menu">';
+        html += '<span>Shipping Status</span>';
+        html += '<span class="icon is-small">';
+        html += '<i class="fas fa-angle-down" aria-hidden="true"></i>';
+        html += '</span>';
+        html += '</button>';
         html += '</div>';
+        html += '<div class="dropdown-menu" id="dropdown-menu" role="menu">';
+        html += '<div class="dropdown-content">';
+        html += '<a href="#" class="dropdown-item"> Draft</a>';
+        html += '<a href="#" class="dropdown-item"> Pending</a>';
+        html += '<a href="#" class="dropdown-item"> Shipped</a>';
+        html += '<a href="#" class="dropdown-item"> Delivered</a>';
+        html += '<a href="#" class="dropdown-item"> Closed</a>';
+        html += '</div></div></div>';
+        html += '<button class="button is-info" style="margin-left: 1em;" href="">Update Order </button>';
+  
+
     
         $('#editOrderContainer').html(html);
 
