@@ -3,8 +3,8 @@
 
 // Makes API URL switchable for dev purposes. DO NOT COMMIT TO DEVELOP WITH THIS SET TO LOCALHOST
 
-// const api_url = "https://csr-api-a.azurewebsites.net";
-const api_url = "http://localhost:3000";
+const api_url = "https://csr-api-a.azurewebsites.net";
+//const api_url = "http://localhost:3000";
 
 
 async function getAllOrders() {
