@@ -1,7 +1,10 @@
+function loadPage(id) {
+    localStorage.setItem("orderId", id);
+    window.location = 'editOrder.html';
+}
 $( document ).ready(function() {
     getAll();
 });
-
 // 2021-03-18T18:12:00.000Z
 
 function sqlToJsDate(sqlDate){
@@ -38,7 +41,7 @@ async function getAll() {
 
     for(var i = 0; i< data.length; i++) {
 
-        var order_status;
+      /*  var order_status;
         switch(data[i].order_status_id) {
             case 100:
                 order_status = 'Draft';
@@ -54,14 +57,14 @@ async function getAll() {
                 break;
             case 300:
                 order_status = 'Closed';
-        }
+        }*/
 
         html += '<div class="tile is-parent">';
         html += '<article class="tile is-child box">';
-        html += '<a class="title" href="./orderInfo.html">Order ID: ' + data[i].id + '</a>';
+        html += '<a class="title"  onclick=' + `loadPage(${data[i].order_id})` + '>Order ID: '+ data[i].order_id + '</a>';
         html += '<div class="content"> <br>';
         html += '<p class="text1">Date Created: ' + sqlToJsDate(data[i].datetime_order_placed) + '</p>';
-        html += '<p class="text1"> Order Status: ' + order_status + '</p>';
+        html += '<p class="text1"> Order Status: ' + data[i].status + '</p>';
         html += '<p class="text1"> Total Price: ' + data[i].total_order_price +  '</p><br>';
         html += '</div>';
         html += '</article>';

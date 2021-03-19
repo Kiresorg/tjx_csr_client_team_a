@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+   console.log(Number(localStorage.getItem("productId")));
     getProductDescription(Number(localStorage.getItem("productId")));
 });
 
@@ -11,8 +12,8 @@ async function getProductDescription(id) {
     html += '<div class="box">';
     html += '<a class="title has-text-black">' + data.name + '</a>';
     html += '<div class="content"> <br>';
-    html += '<p class="subtitle has-text-black"> SKU: ' + data.sku + '</p>';
-    html += '<p class="subtitle has-text-black">Product Description: ' + data.description + '</p>';
+    html += '<p class="text1 has-text-black"> SKU: ' + data.sku + '</p>';
+    html += '<p class="text1 has-text-black">Product Description: ' + data.description + '</p>';
     html += '<p class="text1 has-text-black">Quantity Available: ' + data.quantity + '</p>';
     html += '<p class="text1">Price: ' + data.unit_price + '</p>';
     html += '</div>';
@@ -34,8 +35,8 @@ async function getProductDescription(id) {
 
     html += '<hr class="dropdown-divider">';
     html += '<a href="#" class="dropdown-item">Other Amount</a>';
-    html += '</div></div>';
-    html += '<button class="button is-success" href="">Add to Order</button>';
+    html += '</div></div></div>';
+    html += '<button class="button is-info" style="margin-left: 1em;" href="">Add to Order</button>';
 
     $('#productContainer').html(html);
 };
