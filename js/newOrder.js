@@ -7,5 +7,13 @@ function saveDraft(){
 }
 
 function addProducts(){
-    console.log("Post new order to the database and route to the products page");
+    let customerInfo = {
+        "customerName": $("#customerName_input").val(),
+        "address_line1" :  $("#address1_input").val(),
+        "address_line2" : $("#address2_input").val(),
+        "city" : $("#city_input").val(),
+        "state" : $("#state_input").val(),
+        "zip" : $("#zip_input").val(),
+        "notes" : $("#customerNotes_input").val()
+    }
 }
