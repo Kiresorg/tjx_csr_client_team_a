@@ -14,18 +14,18 @@ async function getAllOrders() {
 	url: api_url + "/api/orders",
 	method: "GET"
 })
-
+console.log(response.data);
 return response.data;
 }
 
 //--------------------------------------------------------------------------------
 
-async function getOrder() {
+async function getOrder(id) {
 	const response = await axios ({
-	url: api_url + "/api/orders/:id",
+	url: api_url + `/api/orders/${id}`,
 	method: "GET"
 })
-console.log(response.data)
+return response.data;
 }
 
 //--------------------------------------------------------------------------------
