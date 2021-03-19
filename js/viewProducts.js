@@ -15,6 +15,7 @@ async function getAll() {
     
 
     for(var i = 0; i< data.length; i++) {
+        html += '<li>';
         html += '<div class="tile is-parent">';
         html += '<article class="tile is-child box">';
         html += '<a class="title" onclick=' + `loadPage(${data[i].id})` + '>' + data[i].name + '</a>';
@@ -26,6 +27,7 @@ async function getAll() {
         html += '</div>';
         html += '</article>';
         html += '</div>';
+        html += '</li>';
     }
 
 $('#productsContainer').html(html);
