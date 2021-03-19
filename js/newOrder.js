@@ -1,3 +1,41 @@
+// get all customers on page load
+
+async function initializePage() {
+    let customers = await getAllCustomers();
+    let foo = await populateCustDropdown(customers);
+}
+
+async function refreshCustomerList() {
+    customers = await getAllCustomers();
+}
+
+async function populateCustDropdown(cust) {
+    let html = "<label for\"custSelect\">Choose a Customer:</label>";
+
+    html += "<select name=\"customerDropdown\" id=\"customer_id\">";
+
+    for(let i=0; i< cust.length; i++) {
+        html += "<option value=\"" + cust[i].customer_id + "\">" 
+            + cust[i].last_name + ", " + "</option>"
+    }
+
+    $('#custDropdown').html(html);
+
+
+    /*
+    <div id="custSelector">
+        <label for="custSelect">Choose a Customer:</label>
+
+        <select name="customerDropdown" id="customer_id">
+        <option value="1">Andy Bernard</option>
+        <option value="2">Dwight Shrute</option>
+        <option value="3">Angela Kinsey</option>
+        <option value="4">Pam Beasley</option>
+        </select>
+    </div>
+    */
+}
+
 //add event listeners for button clicks
 $("#saveDraft_button").on("click", saveDraft);
 $("#addProducts_button").on("click", addProducts);
