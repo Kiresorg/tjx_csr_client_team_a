@@ -32,7 +32,7 @@
 * Database
     - MySQL Database
     - ![Database Schema](capstone_db.png "Database Schema")
-* Frontend tech choices are left to your discretion
+* Frontend
     - CSS: [Bulma](https://bulma.io/) for styling 
     - JS: [JQuery](https://jquery.com/) for in-browser javascript
     - Our frontend allows us to navigate through all orders/customers/products and individual orders/customers/products. We also have the ability to create new orders/customers/products, and place certain products into an existing or new order, as well as tying that specific order to a specific customer. Our front end also contains a landing page from which we can navigate to all other pages using a menu bar. We also give users the ability to search through orders/customers/products using a search bar at the top of each page. 
