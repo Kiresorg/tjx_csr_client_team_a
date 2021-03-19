@@ -1,6 +1,6 @@
 function loadPage(id) {
     localStorage.setItem("productId", id);
-    window.location = 'productDescription.html';
+    window.location = 'productinfo.html';
 }
 
 $( document ).ready(function() {
