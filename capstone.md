@@ -26,22 +26,22 @@
 
 ## Technology stack
 * Backend 
-    - (Express/Node.js) is required
-    - The choice of additional Express middleware is unconstrained
-    - insert API flowchart
-    - Explain each API endpoint and how they interact with the DB/Front-end
+    - Express/Node.js
+    - API endpoints allowed us to get both individual orders/customers/products, as well as ALL orders/customers/products from the database, and then create new orders/customers/products that are then populated into the database
     - ![API Flow](API_flow.png "API Flow")
 * Database
-    - MySQL
+    - MySQL Database
     - ![Database Schema](capstone_db.png "Database Schema")
 * Frontend tech choices are left to your discretion
-    - CSS: [Bulma](https://bulma.io/) is recommended 
-    - JS: [JQuery](https://jquery.com/) is recommended
-    - insert picture of webpage
-    - explain how many pages we have and what they do.
+    - CSS: [Bulma](https://bulma.io/) for styling 
+    - JS: [JQuery](https://jquery.com/) for in-browser javascript
+    - Our frontend allows us to navigate through all orders/customers/products and individual orders/customers/products. We also have the ability to create new orders/customers/products, and place certain products into an existing or new order, as well as tying that specific order to a specific customer. Our front end also contains a landing page from which we can navigate to all other pages using a menu bar. We also give users the ability to search through orders/customers/products using a search bar at the top of each page. 
 * Environment
-    - flush out later
-    - insert diagram of architecture
+    - All code is centralized through GitHub
+    - Develop Branch is the source of truth
+    - A CD pipeline allows us to automatically deploy changes made to the Develop Branch to an Azure app services environment where our site lives
+    - API and Database server also live in a different Azure environment, giving us the following architecture:
+    - ![Architecture Diagram](Architecture.pdf "Architecture Diagram")
 
 ## Problems Worked Through
 * Problem 1
