@@ -137,7 +137,7 @@ return response.data
 
 async function updateProduct() {
 	const response = await axios ({
-	url: api_url + "/api/product/:id",
+	url: api_url + "/api/products/:id",
 
 	method: "PUT"
 })
