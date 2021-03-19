@@ -12,7 +12,7 @@ async function getAll() {
     for(var i = 0; i< data.length; i++) {
         html += '<div class="tile is-parent">';
         html += '<article class="tile is-child box">';
-        html += '<a class="title" href="https://www.marshalls.com">' + data[i].name + '</a>';
+        html += '<a class="title" href="productinfo.html">' + data[i].name + '</a>';
         html += '<div class="content"> <br>';
         html += '<p class="text1">SKU: ' + data[i].sku + '</p>';
         html += '<p class="text1"> Quantity: ' + data[i].quantity + '</p>';
