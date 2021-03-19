@@ -1,5 +1,41 @@
 # TJX Engineer I Cohort Training Capstone Project
  !["mainPortal"](./pictures/portalPage.PNG "mainPortal")
+ 
+## Purpose of the Capstone
+* To give the students practical exprience as part of a working dev team. 
+* Key technologies to focus on were:
+   - Day to day workflow, including source control management
+   - API development
+   - Database-to-Server interaction (ORM)
+   - Standard web development (HTML/CSS/JavaScript)
+   - DevOps including CI/CD pipelines
+
+ ## Contributors
+* Our capstone started off with two team & two projects. After not too long, we realized how intertwined the teams were working and merged into one team, and one project. Here are the contributors:
+* Instructor:
+    - Erik Gross
+* Engineer Cohort
+    - Angelica Puchovsky
+    - Apoorva Karpurapu
+    - Brandon Wade
+    - Cameron Sanborn
+    - Corey Byrne
+    - Corrin Courville
+    - Dominique Mendes
+    - James Holden
+    - Jeff Louzada
+    - Jack Brooks
+    - Kevin Hoang
+    - Kristin Antone
+    - Lavon Burgo
+    - Noah Mezher
+    - Patrick Gilbert
+    - Patrick Kelley
+    - Rey Sarmiento
+    - Shane Driskell
+    - Stephanie Velez
+    - Wajih Khawaja
+
 ## Description
 * Project: Create an "Order Tracking" application in 1 Week
     - Application purpose: Amplifying the productivity of TJX customer service representatives with an efficient CSR portal to best serve customers calling in. Customers will be able to place orders, edit orders, edit their info, or ask about availability of specific products through the CSR using the web application.
@@ -83,29 +119,3 @@
 * Each CRUD operation is tied to an API endpoint that uses the customer, order, and product controllers alongside the ORM (Object Relational Mapper) to GET, POST, PUT, or DELETE information from the database.
 * As a CSR, you will have access to the Customer page to find the customer you are talking to. You can then edit that customer's info, make a new order for that customer, look at that customer's current & past orders, or delete that customer. Whatever the customer wants to do!
 * CSRs can also view the current inventory that's available to their customers.
- 
- ## Contributors
-* Our capstone started off with two team & two projects. After not too long, we realized how intertwined the teams were working and merged into one team, and one project. Here are the contributors:
-* Instructor:
-    - Erik Gross
-* Engineer Cohort
-    - Angelica Puchovsky
-    - Apoorva Karpurapu
-    - Brandon Wade
-    - Cameron Sanborn
-    - Corey Byrne
-    - Corrin Courville
-    - Dominique Mendes
-    - James Holden
-    - Jeff Louzada
-    - Jack Brooks
-    - Kevin Hoang
-    - Kristin Antone
-    - Lavon Burgo
-    - Noah Mezher
-    - Patrick Gilbert
-    - Patrick Kelley
-    - Rey Sarmiento
-    - Shane Driskell
-    - Stephanie Velez
-    - Wajih Khawaja
