@@ -25,7 +25,7 @@ console.log(response.data)
 //--------------------------------------------------------------------------------
 
 async function createNewOrder(body) {
-	const response = await axios.post('http://csr-api-a.azurewebsites.net/api/orders', body);
+	const response = await axios.post('https://csr-api-a.azurewebsites.net/api/orders', body);
 	console.log(response.data); 
 }
  
@@ -35,7 +35,7 @@ async function createNewOrder(body) {
 
 async function deleteOrder() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/orders/:id",
+	url: "https://csr-api-a.azurewebsites.net/api/orders/:id",
 	method: "DELETE"
 })
 console.log(response.data)
@@ -45,7 +45,7 @@ console.log(response.data)
 
 async function modifyOrder() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/orders/:id",
+	url: "https://csr-api-a.azurewebsites.net/api/orders/:id",
 	method: "GET"
 })
 console.log(response.data)
@@ -57,9 +57,9 @@ console.log(response.data)
 
 async function createCustomer(body) {
 	// const response = await axios ({
-	// url: "http://csr-api-a.azurewebsites.net/api/customer",
+	// url: "https://csr-api-a.azurewebsites.net/api/customer",
 	// method: "POST"
-	const response = await axios.post('http://csr-api-a.azurewebsites.net/api/customers', body);
+	const response = await axios.post('https://csr-api-a.azurewebsites.net/api/customers', body);
 	console.log("HELLO");
 	console.log(response.data);
 
@@ -70,7 +70,7 @@ async function createCustomer(body) {
 
 async function getAllCustomers() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customers",
+	url: "https://csr-api-a.azurewebsites.net/api/customers",
 	method: "GET"
 })
 return response.data;
@@ -81,7 +81,7 @@ return response.data;
 
 async function getCustomer(id) {
 	const response = await axios ({
-	url: `http://csr-api-a.azurewebsites.net/api/customer/${id}`,
+	url: `https://csr-api-a.azurewebsites.net/api/customer/${id}`,
 	method: "GET"
 })
 console.log(response.data)
@@ -91,7 +91,7 @@ console.log(response.data)
 
 async function modifyCustomer(id, body) {
 
-	const response = await axios.put(`http://csr-api-a.azurewebsites.net/api/customers/${id}`, body);
+	const response = await axios.put(`https://csr-api-a.azurewebsites.net/api/customers/${id}`, body);
 
 	return response.data;
 
@@ -99,7 +99,7 @@ async function modifyCustomer(id, body) {
 
 async function deleteSpecificCustomer() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/customers/:id",
+	url: "https://csr-api-a.azurewebsites.net/api/customers/:id",
 	method: "DELETE"
 })
 console.log(response.data)
@@ -120,7 +120,7 @@ return response.data;
 
 async function getProduct() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/product/:id",
+	url: "https://csr-api-a.azurewebsites.net/api/product/:id",
 	method: "GET"
 })
 console.log(response.data)
@@ -130,7 +130,7 @@ console.log(response.data)
 
 async function updateProduct() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/product/:id",
+	url: "https://csr-api-a.azurewebsites.net/api/product/:id",
 	method: "PUT"
 })
 console.log(response.data)
