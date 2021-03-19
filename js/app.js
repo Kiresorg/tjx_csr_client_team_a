@@ -92,7 +92,6 @@ console.log(response.data)
 async function modifyCustomer(id, body) {
 
 	const response = await axios.put(`http://csr-api-a.azurewebsites.net/api/customers/${id}`, body);
-
 	return response.data;
 
 }

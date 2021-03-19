@@ -13,7 +13,7 @@ $("#city_input").on('input', checkInputs);
 $("#state_input").on('input', checkInputs);
 $("#zip_input").on('input', checkInputs);
 $("#customerNotes_input").on('input', checkInputs);
-
+/*
 //Dummy data to play with, replace with GET for selected customer
  dummyData = {
     firstName: "Pat",
@@ -28,7 +28,8 @@ $("#customerNotes_input").on('input', checkInputs);
     zip: "01020",
     customerNotes: "Likes purple products"
 }
-
+*/
+/*
 //populate the inputs with selected customer data
 $("#firstName_input").val(dummyData.firstName);
 $("#middleName_input").val(dummyData.middleName);
@@ -41,7 +42,7 @@ $("#city_input").val(dummyData.city);
 $("#state_input").val(dummyData.state);
 $("#zipcode_input").val(dummyData.zip);
 $("#customerNotes_input").val(dummyData.customerNotes);
-
+*/
 
 function checkInputs(){
     if($("#firstName_input").val().length > 0 &&
