@@ -2,21 +2,18 @@
 <html>
     <head>
         <meta charset="utf-8">
-       
-        <title>New Order | CSR Portal</title>
-        <meta name="description" content="Client Side Application">
-        <meta name="author" content="The 20% Maxxinistas">
-      
-        <!-- Bulma CSS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Edit Customer | CSR Portal</title>
         <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-      
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
-       
-      </head>
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
 
-   <body>
-       
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+      </head>
+    <body>
     <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="main.html">
@@ -60,54 +57,69 @@
             </a>
 
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link is-arrowless">
-                  <i class="fas fa-user-circle fa-2x"></i>
-              </a>
+                <a class="navbar-link is-arrowless">
+                    <i class="fas fa-user-circle fa-2x"></i>
+                </a>
         
-              <div class="navbar-dropdown is-right">
-                <a class="navbar-item">
-                  Settings
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item">
-                  Logout
-                </a>
-              </div>
+                <div class="navbar-dropdown is-right">
+                  <a class="navbar-item">
+                    Settings
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item">
+                    Logout
+                  </a>
+                </div>
             </div>
           </div>
         </div>
     </nav>
-
-    <script src="../js/app.js"></script>
-
-    <section class="hero is-success is-fullheight has-background-grey-lighter">
+    <section class="hero is-success is-fullheight">
         <div class="hero-body has-background-grey-lighter">
             <div class="column is-4 is-offset-4">
                 <div class="box">
-                    <h3 class="title has-text-black">New Order</h3>
-                    <label>Fields with '*' are required</label>
+                    <h4 class="title is-4 has-text-black">Edit Customer</h4>
+                    <label>Fields with * are required.</label>
                     <div class="field">
                         <label class="label">First Name *</label>
                         <div class="control">
-                            <input id ="firstName_input" class="input" type="text" placeholder="Customer Name" required>
+                            <input id = "firstName_input" class="input" type="text" placeholder="First Name" required>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Middle Name</label>
                         <div class="control">
-                            <input id ="middleName_input" class="input" type="text" placeholder="Customer Name">
+                            <input id = "middleName_input" class="input" type="text" placeholder="Middle Name">
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label">Last Name *</label>
+                            <label class="label">Last Name *</label>
                         <div class="control">
-                            <input id ="lastName_input" class="input" type="text" placeholder="Customer Name" required>
+                            <input id = "lastName_input" class="input" type="text" placeholder="Last Name"required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Phone Number *</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input id = "phoneNumber_input" class="input" type="tel" pattern="[0-9]{10}" placeholder="Phone Number"required>
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-phone"></i>
+                        </span>
+                    </div>
+                </div>
+                    <div class="field">
+                        <label class="label">Email *</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id = "email_input" class="input" type="email" placeholder="Email input"required>
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-envelope"></i>
+                            </span>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Street Address *</label>
                         <div class="control has-icons-left has-icons-right">
-                            <input id = "address1_input" class="input" type="input" placeholder="Street Address" required>
+                            <input id = "address1_input" class="input" type="input" placeholder="Street Address"required>
                             <span class="icon is-small is-left">
                                 <i class="fa fa-address-book"></i>
                             </span>
@@ -127,7 +139,7 @@
                             <div class="field">
                                 <label class="label">City *</label>
                                 <div class="control">
-                                    <input id ="city_input" class="input" type="input" placeholder="City" required>
+                                    <input id = "city_input" class="input" type="input" placeholder="City"required>
                                 </div>
                             </div>
                         </div>
@@ -135,15 +147,15 @@
                             <div class="field">
                                 <label class="label">State *</label>
                                 <div class="control">
-                                    <input id = "state_input" class="input" type="input" placeholder="Ex: MA, NJ, etc" required>
+                                    <input id = "state_input" class="input" type="input" placeholder="State Ex: MA, CT, NJ"required>
                                 </div>
                             </div>
                         </div>
                         <div class = "column">
                             <div class="field">
-                                <label  class="label">Zip Code *</label>
+                                <label class="label">Zip Code *</label>
                                 <div class="control">
-                                    <input id = "zipcode_input" pattern="[0-9]{5}" class="input" type="input" placeholder="Ex: 02364"required>
+                                    <input id = "zipcode_input" class="input" type="text" pattern="[0-9]{5}" placeholder="Zip Code"required>
                                 </div>
                             </div>
                         </div>
@@ -152,27 +164,18 @@
                     <div class="field">
                         <label class="label">Customer Notes</label>
                         <div class="control">
-                          <textarea id = "customerNotes_input" class="textarea" placeholder="Notes"></textarea>
+                          <textarea id="customerNotes_input" class="textarea" placeholder="Notes"></textarea>
                         </div>
                       </div>
-
                     <div class="field is-grouped">
-                        <div class="control">
-                            <a href = "viewOrders.html" id = "saveDraft_button" class="button is-warning">Save as Draft</a>
-                        </div>
                     </div>
-                    <div class="field is-grouped">
-                        <div class="control">
-                            <a href = "viewProducts.html" id = "addProducts_button" class="button is-link" >Add Products</a>
-                        </div>
-                    </div>
+                    <button id="update_button" button class="button is-link">Update</button>
+                <a href="customerinfo.html" button class="button is-danger">Cancel</a>
                 </div>
             </div>
         </div>
     </section>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src = "../js/app.js"></script>
-    <script src = "../js/newOrder.js"></script>
   </body>
+  <script src = "../js/app.js"></script>
+  <script src = "../js/editCustomer.js"></script>
 </html>
