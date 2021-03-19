@@ -75,9 +75,9 @@
     - JS: [JQuery](https://jquery.com/) for in-browser javascript
     - Our frontend allows us to navigate through all orders/customers/products and individual orders/customers/products. We also have the ability to create new orders/customers/products, and place certain products into an existing or new order, as well as tying that specific order to a specific customer. Our front end also contains a landing page from which we can navigate to all other pages using a menu bar. We also give users the ability to search through orders/customers/products using a search bar at the top of each page. 
 * Environment
-    - All code is centralized through GitHub
+    - Source Code Management (SCM) through GitHub
     - Develop Branch is the source of truth
-    - A CD pipeline allows us to automatically deploy changes made to the Develop Branch to an Azure app services environment where our site lives
+    - A CI/CD pipeline allows us to automatically deploy changes made to the Develop Branch to an Azure app services environment where our site lives
     - API and Database server also live in a different Azure environment, giving us the following architecture:
     - ![Architecture Diagram](./pictures/Architecture.png "Architecture Diagram")
 
