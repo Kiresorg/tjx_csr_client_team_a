@@ -5,9 +5,11 @@
     - Application purpose: Amplifying the productivity of TJX customer service representatives with an efficient CSR portal to best serve customers calling in. Customers will be able to place orders, edit orders, edit their info, or ask about availability of specific products through the CSR using the web application.
 
 ## The Process
+
 ### Day 1
 * Architecture, Planning, & Organization:
     - The first day of our capstone project consisted of laying out every element that a CSR web app should have. We then had to decide what components were the most important, and feasible to complete within our timeframe. Our team was split into subgroups working on different layers of the app including UI/UX, API, Documentation, Database, Models/Controllers, etc.. Each subgroup starting putting together a code skeleton to work from for the rest of the week.
+!["API_Flow"](./pictures/API_flow.png "API_Flow")
 ### Day 2
 * DevOps, CI/CD, GitHub:
     - The second day was where we started diving into the code, as well as learning to work with a DevOps mindset and central code repository. Using Azure DevOps, each team began to create and assign user stories to be completed. Our first daily stand-up occurred to get a sense of where everyone was heading with their sections. An Azure pipeline was set up for the backend, so any merges that happened with our source of truth in github were automatically built and pushed to a live api.
