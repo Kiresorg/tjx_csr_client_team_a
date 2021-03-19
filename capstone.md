@@ -1,5 +1,5 @@
 # TJX Training Program Capstone Project
- 
+ !["mainPortal"](./pictures/portalPage.png "mainPortal")
 ## Description
 * Project: Create an "Order Tracking" application
     - Application purpose: Amplifying the productivity of TJX customer service representatives with an efficient CSR portal to best serve customers calling in. Customers will be able to place orders, edit orders, edit their info, or ask about availability of specific products through the CSR using the web application.
