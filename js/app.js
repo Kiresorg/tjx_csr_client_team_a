@@ -3,29 +3,35 @@
 //--------------------------------------------------------------------------------
 //ORDERS
 
+// Makes API URL switchable for dev purposes. DO NOT COMMIT TO DEVELOP WITH THIS SET TO LOCALHOST
+
+const api_url = "https://csr-api-a.azurewebsites.net";
+//const api_url = "http://localhost:3000";
+
+
 async function getAllOrders() {
 	const response = await axios ({
-	url: "https://csr-api-a.azurewebsites.net/api/orders",
+	url: api_url + "/api/orders",
 	method: "GET"
 })
-
+console.log(response.data);
 return response.data;
 }
 
 //--------------------------------------------------------------------------------
 
-async function getOrder() {
+async function getOrder(id) {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/orders/:id",
+	url: api_url + `/api/orders/${id}`,
 	method: "GET"
 })
-console.log(response.data)
+return response.data;
 }
 
 //--------------------------------------------------------------------------------
 
 async function createNewOrder(body) {
-	const response = await axios.post('https://csr-api-a.azurewebsites.net/api/orders', body);
+	const response = await axios.post(api_url + '/api/orders', body);
 	console.log(response.data); 
 }
  
@@ -35,7 +41,7 @@ async function createNewOrder(body) {
 
 async function deleteOrder() {
 	const response = await axios ({
-	url: "https://csr-api-a.azurewebsites.net/api/orders/:id",
+	url: api_url + "/api/orders/:id",
 	method: "DELETE"
 })
 console.log(response.data)
@@ -45,7 +51,7 @@ console.log(response.data)
 
 async function modifyOrder() {
 	const response = await axios ({
-	url: "https://csr-api-a.azurewebsites.net/api/orders/:id",
+	url: api_url + "/api/orders/:id",
 	method: "GET"
 })
 console.log(response.data)
@@ -57,9 +63,9 @@ console.log(response.data)
 
 async function createCustomer(body) {
 	// const response = await axios ({
-	// url: "https://csr-api-a.azurewebsites.net/api/customer",
+	// url: api_url + "/api/customer",
 	// method: "POST"
-	const response = await axios.post('https://csr-api-a.azurewebsites.net/api/customers', body);
+	const response = await axios.post(api_url + '/api/customers', body);
 	console.log("HELLO");
 	console.log(response.data);
 
@@ -70,7 +76,7 @@ async function createCustomer(body) {
 
 async function getAllCustomers() {
 	const response = await axios ({
-	url: "https://csr-api-a.azurewebsites.net/api/customers",
+	url: api_url + "/api/customers",
 	method: "GET"
 })
 return response.data;
@@ -81,7 +87,7 @@ return response.data;
 
 async function getCustomer(id) {
 	const response = await axios ({
-	url: `https://csr-api-a.azurewebsites.net/api/customer/${id}`,
+	url: api_url + `/api/customer/${id}`,
 	method: "GET"
 })
 console.log(response.data)
@@ -91,7 +97,7 @@ console.log(response.data)
 
 async function modifyCustomer(id, body) {
 
-	const response = await axios.put(`https://csr-api-a.azurewebsites.net/api/customers/${id}`, body);
+	const response = await axios.put(api_url + `/api/customers/${id}`, body);
 
 	return response.data;
 
@@ -99,7 +105,7 @@ async function modifyCustomer(id, body) {
 
 async function deleteSpecificCustomer() {
 	const response = await axios ({
-	url: "https://csr-api-a.azurewebsites.net/api/customers/:id",
+	url: api_url + "/api/customers/:id",
 	method: "DELETE"
 })
 console.log(response.data)
@@ -110,7 +116,7 @@ console.log(response.data)
 
 async function getAllProducts() {
 	const response = await axios ({
-	url: "https://csr-api-a.azurewebsites.net/api/products/",
+	url: api_url + "/api/products/",
 	method: "GET"
 })
 return response.data;
@@ -118,19 +124,21 @@ return response.data;
 
 //--------------------------------------------------------------------------------
 
-async function getProduct() {
+async function getProduct(id) {
 	const response = await axios ({
-	url: "https://csr-api-a.azurewebsites.net/api/product/:id",
+	url: api_url + `/api/products/${id}`,
 	method: "GET"
 })
-console.log(response.data)
+//console.log(response.data)
+return response.data
 }
 
 //--------------------------------------------------------------------------------
 
 async function updateProduct() {
 	const response = await axios ({
-	url: "https://csr-api-a.azurewebsites.net/api/product/:id",
+	url: api_url + "/api/products/:id",
+
 	method: "PUT"
 })
 console.log(response.data)

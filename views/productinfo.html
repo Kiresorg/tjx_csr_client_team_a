@@ -1,0 +1,102 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+ 
+  <title>Product Info | CSR Portal</title>
+  <meta name="description" content="Client Side Application">
+  <meta name="author" content="The 20% Maxxinistas">
+
+  <!-- Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <!-- Load Scripts-->
+  <script src="../js/app.js"></script>
+ 
+</head>
+   
+<body>
+    <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="../index.html">
+            CSR Portal
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="viewOrders.html" class="navbar-item">
+                Orders
+            </a>
+      
+            <a href="viewCustomers.html" class="navbar-item">
+                Customers
+            </a>
+
+            <a href="viewProducts.html" class="navbar-item" style="color:#3298dc; font-weight: bold;">
+                Inventory
+            </a>
+            <!-- <form class="navbar-item">
+                <input class="input is-rounded" type="text" placeholder="Search">
+                <button class="button is-small is-info is-rounded" style="margin-left: 10px;" type="submit"><i class="fas fa-search fa-md"></i></button>
+            </form> -->
+            
+          </div>
+      
+          <div class="navbar-end">
+            <a href="newOrder.html" class="navbar-item">
+                New order
+            </a>
+      
+            <a href="createCustomer.html" class="navbar-item">
+                Create new customer
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <i class="fas fa-user-circle fa-2x"></i>
+                </a>
+        
+                <div class="navbar-dropdown is-right">
+                  <a class="navbar-item">
+                    Settings
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item">
+                    Logout
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <section class="hero is-success is-fullheight">
+        <div class="hero-body has-background-grey-lighter" style="display: block;">
+            <div class="column is-4 is-offset-4">
+              <div id = 'productContainer'>
+                <script src = '../js/productinfo.js'></script>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>

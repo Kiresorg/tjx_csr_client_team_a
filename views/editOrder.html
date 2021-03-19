@@ -9,9 +9,18 @@
       
         <!-- Bulma CSS -->
         <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-      
+        
+        <!-- Axios -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
+
+        <!-- jQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <!-- Local scripts-->
+        <script src="../js/app.js"></script>
        
       </head>
 
@@ -19,7 +28,7 @@
 
     <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-        <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="main.html">
+        <a class="navbar-item" style="font-weight: bold; font-size: x-large;" href="../index.html">
             CSR Portal
         </a>
 
@@ -32,7 +41,7 @@
         
         <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <a href="viewOrders.html" class="navbar-item">
+            <a href="viewOrders.html" class="navbar-item" style="color:#3298dc; font-weight: bold;">
                 Orders
             </a>
         
@@ -43,10 +52,10 @@
             <a href="viewProducts.html" class="navbar-item">
                 Inventory
             </a>
-            <form class="navbar-item">
+            <!-- <form class="navbar-item">
                 <input class="input is-rounded" type="text" placeholder="Search">
                 <button class="button is-small is-info is-rounded" style="margin-left: 10px;" type="submit"><i class="fas fa-search fa-md"></i></button>
-            </form>
+            </form> -->
                 
         </div>
         
@@ -79,36 +88,16 @@
     </nav>
 
     <section class="hero is-success is-fullheight">
-        <div class="hero-body has-background-grey-lighter" style="display: block;">
+        <div class="hero-body has-background-grey-lighter">
             <div class="column is-4 is-offset-4">
-                <div class="box">
-                    <h3 class="title has-text-black">Edit Order</h3>
-                    <div class="content">
-                        <p class="title" style="color: inherit;">Order ID:</p>
-                        <p class="text1">Date Created:</p>
-                        <p class="text1">Customer Name:</p>
-                        <p class="text1">Products:</p>
-                        <p class="text1">Customer Notes:</p>
-                        <p class="text1">Shipping Address:</p>
-                        <p class="subtitle" style="color: inherit;"><b>Price:</b></p>
-                        <div class="field is-grouped">
-                            <div class="control">
-                                <button class="button is-warning">Add Products</button>
-                            </div>
-                        </div>
-                        <div class="field is-grouped">
-                            <div class="control">
-                                <button class="button is-link">Checkout</button>
-                            </div>
-                        </div>
+              <div id = 'editOrderContainer'>
+                <script src = '../js/editOrder.js'></script>
+                  </div>
                     </div>
+                  </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-    <script src="js/app.js"></script>
   </body>
 </html>
