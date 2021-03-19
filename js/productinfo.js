@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+   console.log(Number(localStorage.getItem("productId")));
     getProductDescription(Number(localStorage.getItem("productId")));
 });
 
