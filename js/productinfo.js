@@ -34,8 +34,8 @@ async function getProductDescription(id) {
 
     html += '<hr class="dropdown-divider">';
     html += '<a href="#" class="dropdown-item">Other Amount</a>';
-    html += '</div></div>';
-    html += '<button class="button is-success" href="">Add to Order</button>';
+    html += '</div></div></div>';
+    html += '<button class="button is-info" style="margin-left: 1em;" href="">Add to Order</button>';
 
     $('#productContainer').html(html);
 };
