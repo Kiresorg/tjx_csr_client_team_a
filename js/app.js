@@ -120,7 +120,7 @@ return response.data;
 
 async function getProduct(id) {
 	const response = await axios ({
-	url: `http://csr-api-a.azurewebsites.net/api/products/${id}`,
+	url: `https://csr-api-a.azurewebsites.net/api/products/${id}`,
 	method: "GET"
 })
 //console.log(response.data)
@@ -131,7 +131,7 @@ return response.data
 
 async function updateProduct() {
 	const response = await axios ({
-	url: "http://csr-api-a.azurewebsites.net/api/products/:id",
+	url: "https://csr-api-a.azurewebsites.net/api/products/:id",
 	method: "PUT"
 })
 console.log(response.data)
