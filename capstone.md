@@ -43,7 +43,7 @@
     - Develop Branch is the source of truth
     - A CD pipeline allows us to automatically deploy changes made to the Develop Branch to an Azure app services environment where our site lives
     - API and Database server also live in a different Azure environment, giving us the following architecture:
-    - ![Architecture Diagram](Architecture.pdf "Architecture Diagram")
+    - ![Architecture Diagram](pictures/Architecture.pdf "Architecture Diagram")
 
 ## Problems Worked Through
 * Coordination
