@@ -1,65 +1,94 @@
 <!doctype html>
  
 <html lang="en">
+  <head>
+    <title>Main | CSR Portal</title>
+    <meta name="description" content="TJX CSR Portal main page">
+    <meta name="author" content="The 20% Maxxinistas">
+    <meta charset="utf-8">
+    
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
 
-<head>
-  <meta charset="utf-8">
- 
-  <title>Login | CSR Portal</title>
-  <meta name="description" content="Client Side Application">
-  <meta name="author" content="The 20% Maxxinistas">
-  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-  <link rel="stylesheet" type="text/css" href="./css/login.css"> 
- 
-</head>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3862d28320.js" crossorigin="anonymous"></script>
+  </head>
    
-  <body>
- 
-    <section class="hero is-success is-fullheight">
-      <div class="hero-body has-background-grey-lighter">
-          <div class="container has-text-centered">
-              <div class="column is-4 is-offset-4">
-                  <h3 class="title has-text-black">CSR Portal</h3>
-                  <hr class="login-hr">
-                  <p class="subtitle has-text-black">Please login to proceed.</p>
-                  <div class="box">
-                      <figure style="margin-bottom: 1em;">
-                          <img src="https://www.tjx.com/includes/img/tjx-logo-mobile.svg">
-                      </figure>
-                      <form>
-                          <div class="field">
-                              <div class="control">
-                                  <input id = "email_input" class="input is-large" type="email" placeholder="Your Email" autofocus="">
-                              </div>
-                          </div>
- 
-                          <div class="field">
-                              <div class="control">
-                                  <input id = "password_input" class="input is-large" type="password" placeholder="Your Password">
-                              </div>
-                          </div>
-                          <div class="field">
-                              <label class="checkbox">
-                                <input type="checkbox">
-                                    Remember me
-                                </input>
-                              </label>
-                          </div>
-                          <button id="login_button" class="button is-block is-info is-large is-fullwidth is-dark">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
-                          
-                          <!-- Temporary by-pass, remove after implementing login. -->
-                          <a href="views/main.html" class="button" style="margin: 10px 0 10px 0;">Temp by-pass</a><br>
+<body>
+    <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" style="color:#3298dc; font-weight: bold; font-size: x-large;" href="index.html">
+            CSR Portal
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="views/viewOrders.html" class="navbar-item">
+                Orders
+            </a>
+      
+            <a href="views/viewCustomers.html" class="navbar-item">
+                Customers
+            </a>
 
-                          <a href="views/createAccount.html" class="button">Create Account</a>
-                      </form>
-                  </div>
-              </div>
+            <a href="views/viewProducts.html" class="navbar-item">
+                Inventory
+            </a>
+            <form class="navbar-item">
+                <input class="input is-rounded" type="text" placeholder="Search">
+                <button class="button is-small is-info is-rounded" style="margin-left: 10px;" type="submit"><i class="fas fa-search fa-md"></i></button>
+            </form>
+            
           </div>
+      
+          <div class="navbar-end">
+            <a href="views/newOrder.html" class="navbar-item">
+                New order
+            </a>
+      
+            <a href="views/createCustomer.html" class="navbar-item">
+                Create new customer
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-arrowless">
+                  <i class="fas fa-user-circle fa-2x"></i>
+              </a>
+        
+              <div class="navbar-dropdown is-right">
+                <a class="navbar-item">
+                  Settings
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Logout
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <section class="section is-small" style="margin: 2em;">
+      <div class="columns is-mobile is-centered is-vcentered">
+        <div class="column">
+          <img src="pictures/loginBG.jpg">
+        </div>
+        <div class="column">
+          <span class="title">Welcome to the TJX Customer Service Representative Portal</span><br>
+          <span class="subtitle">Create and manage customer orders</span>
+        </div>
       </div>
-  </section>   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src = "./js/login.js"></script>
- 
-  </body>
+    </section>
+
+    <script src="../js/app.js"></script>
+</body>
 </html>
+
 
