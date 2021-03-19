@@ -33,8 +33,8 @@
     - ![API Flow](API_flow.png "API Flow")
 * Database
     - MySQL Database
-    - ![Database Schema](capstone_db.png "Database Schema")
-* Frontend
+    - ![Database ERD](ERD.png "Database ERD")
+* Frontend tech choices are left to your discretion
     - CSS: [Bulma](https://bulma.io/) for styling 
     - JS: [JQuery](https://jquery.com/) for in-browser javascript
     - Our frontend allows us to navigate through all orders/customers/products and individual orders/customers/products. We also have the ability to create new orders/customers/products, and place certain products into an existing or new order, as well as tying that specific order to a specific customer. Our front end also contains a landing page from which we can navigate to all other pages using a menu bar. We also give users the ability to search through orders/customers/products using a search bar at the top of each page. 
@@ -46,11 +46,17 @@
     - ![Architecture Diagram](Architecture.pdf "Architecture Diagram")
 
 ## Problems Worked Through
-* Problem 1
-    - How it was mitigated
+* Coordination
+    - Making sure function names are consistent across all parts of the app
+    - Keeping track of who is doing what, and managing all Pull Requests
 
-* Problem 2
-    - How it was mitigated  
+* Working with New Technologies
+    - Reading through documentation
+    - Understanding dependencies of libraries their constraints 
+
+* Miscellaneous
+    - General bugs and issues
+    - Coding is fun!  
 
 ## Application breadown
 * Each Web Page has a corresponding Javascript page to provide dynamic functionality to each element. The Bulma library was used to style the webpages.
