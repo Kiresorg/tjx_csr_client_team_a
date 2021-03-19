@@ -7,15 +7,22 @@
 ## The Process
 ### Day 1
 * Architecture, Planning, & Organization:
-    - The first day of our capstone project
+    - The first day of our capstone project consisted of laying out every element that a CSR web app should have. We then had to decide what components were the most important, and feasible to complete within our timeframe. Our team was split into subgroups working on different layers of the app including UI/UX, API, Documentation, Database, Models/Controllers, etc.. Each subgroup starting putting together a code skeleton to work from for the rest of the week.
 ### Day 2
-* 
+* DevOps, CI/CD, GitHub:
+    - The second day was where we started diving into the code, as well as learning to work with a DevOps mindset and central code repository. Using Azure DevOps, each team began to create and assign user stories to be completed. Our first daily stand-up occurred to get a sense of where everyone was heading with their sections. An Azure pipeline was set up for the backend, so any merges that happened with our source of truth in github were automatically built and pushed to a live api.
 
 ### Day 3
+* Co-Dependencies & Thinking Differently
+    - On day 3, a lot of subgroups had a lot of code to show, and now wanted to start connecting all of the layers. The database team gives the API team formatting instructions, who gives the front-end functions to access the database through specific API endpoints. All While DevOps is making sure the automatic builds are successful & begin to think about testing. Everyone realizes that any action taken can affect other parts of the app, so teams start to talk, plan, and flush implementations out from end-to-end. Not only is it now important to know what your team is working on, but to understand the flow of the app as whole, and pushes people to start thinking differently.
 
 ### Day 4
+* Code, Code, and more Code:
+    - As soon as day 4 started, we had a quick stand-up, organized and delegated user stories for the day, and got right to work. With more work in the front-end than expected, everyone begins to lend a hand with the CSS/HTML/JS on the web pages. Nearing the end of the day, numerous hurdles including CORS policies, internal server errors, and API calls are overcome. With the last day coming up, more than half of the cohort volunteer to continue coding after-hours, putting full effort into finishing the project.
 
 ### Day 5
+* Loose Ends, Presentation, Graduation
+    - With the final 3.5 hours, loose ends are tied up. These include documentation, links/searches/displays in the front-end, and consistent style changes. With our final stand-up and stories being taken, the final capstone is coming together.
 
 ## Technology stack
 * Backend 
@@ -44,22 +51,55 @@
     - How it was mitigated  
 
 ## Application breadown
-### Allow CSRs to be able to
-* Authenticate themselves via a login mechanism
-* Use CRUD operations for Orders including the ability to interactively add products from the Product catalog
-* Save an Order as a draft
-* Tie the order to a Customer
-* Browse the product catalog (as a CSR adds or removes products from an order, the product count needs to be updated)
-* Browse the customer database
-* Track and change the shipping status of the order
+* Each Web Page has a corresponding Javascript page to provide dynamic functionality to each element. The Bulma library was used to style the webpages.
+* Various customer, order, and product pages use CRUD operations to perform calls to the API. CRUD operations that you will see implemented:
+
+* Customer CRUD operations:
+    - Create a new customer
+    - Read a customer by ID (Name, phone #, address, etc)
+    - Read all customers
+    - Update customer info
+    - Delete a customer
+* Order CRUD Operations:
+    - Create a new order for a customer
+    - Read a specific order (order ID, status, products, etc)
+    - Read all orders
+    - Read all orders for a specific customer
+    - Update an exisiting order before shipping
+    - Delete an order
+* Product CRUD Operations:
+    - Read a specific product by ID (quantity, ID, price, more info)
+    - Read the products from a specific order
+    - Read all products 
+
+* Each CRUD operation is tied to an API endpoint that uses the customer, order, and product controllers alongside the ORM (Object Relational Mapper) to GET, POST, PUT, or DELETE information from the database.
+* As a CSR, you will have access to the Customer page to find the customer you are talking to. You can then edit that customer's info, make a new order for that customer, look at that customer's current & past orders, or delete that customer. Whatever the customer wants to do!
+* CSRs can also view the current inventory that's available to their customers.
  
  ## Contributors
-* Our project consisted of two teams. The people working on specific sections of the app (API, DB, UI/UX, etc..) flushed out code skeletons and scripts for each team to then work with and create their own version of the order tracking app.
-* Team A
-    - Patrick Kelley
-    -
-
-* Team B
+* Our capstone started off with two team & two projects. After not too long, we realized how intertwined the teams were working and merged into one team, and one project. Here are the contributors:
+* Instructor:
+    - Erik Gross
+* Engineer Cohort
+    - Angelica Puchovsky
+    - Apoorva Karpurapu
+    - Brandon Wade
+    - Cameron Sanborn
+    - Corey Byrne
+    - Corrin Courville
+    - Dominique Mendes
+    - James Holden
+    - Jeff Louzada
+    - Jack Brooks
+    - Kevin Hoang
+    - Kristin Antone
     - Lavon Burgo
-    -
+    - Noah Mezher
+    - Patrick Gilbert
+    - Patrick Kelley
+    - Rey Sarmiento
+    - Shane Driskell
+    - Stephanie Velez
+    - Wajih Khawaja
+
 ## Demo
