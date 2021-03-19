@@ -30,10 +30,10 @@
 * Backend 
     - Express/Node.js
     - API endpoints allowed us to get both individual orders/customers/products, as well as ALL orders/customers/products from the database, and then create new orders/customers/products that are then populated into the database
-    - ![API Flow](API_flow.png "API Flow")
+    - ![API Flow](./pictures/API_flow.png "API Flow")
 * Database
     - MySQL Database
-    - ![Database ERD](ERD.png "Database ERD")
+    - ![Database ERD](./pictures/ERD.png "Database ERD")
 * Frontend tech choices are left to your discretion
     - CSS: [Bulma](https://bulma.io/) for styling 
     - JS: [JQuery](https://jquery.com/) for in-browser javascript
@@ -43,7 +43,7 @@
     - Develop Branch is the source of truth
     - A CD pipeline allows us to automatically deploy changes made to the Develop Branch to an Azure app services environment where our site lives
     - API and Database server also live in a different Azure environment, giving us the following architecture:
-    - ![Architecture Diagram](/pictures/Architecture.pdf "Architecture Diagram")
+    - ![Architecture Diagram](./pictures/Architecture.pdf "Architecture Diagram")
 
 ## Problems Worked Through
 * Coordination
