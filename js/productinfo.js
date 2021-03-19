@@ -65,9 +65,39 @@ async function getProductDescription(id) {
         //html += '<a href="#" class="dropdown-item">' + i + '</a>';
         html += '<option value="' + i + '">' + i + '</option>'; 
     }
+    html += '<hr class="dropdown-divider">';
+    html += '<a href="#" class="dropdown-item">Other Amount</a>';
+    html += '</div></div></div>';
+    html += '<button class="button is-info" style="margin-left: 1em;" href="">Add to Order</button>';
 
-      html += '</select>';
-      html += '<button class="button is-success" onclick=' + `loadViewProducts()` + '>Add to Order</button>';
-      html += '<hr class="dropdown-divider">';
-    //html += '<a href="#" class="dropdown-item">Other Amount</a>';
-    html += '</div>'; */
+    $('#productContainer').html(html);
+};
+
+
+/* <div class="dropdown is-hoverable">
+                      <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                          <span>Select Quantity</span>
+                          <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                          </span>
+                        </button>
+                      </div> 
+                      
+                      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                          <a href="#" class="dropdown-item">1</a>
+                          <a class="dropdown-item">2</a>
+                          <a href="#" class="dropdown-item">3</a>
+                          <a href="#" class="dropdown-item">4</a>
+                          <a href="#" class="dropdown-item">5</a>
+                          <a href="#" class="dropdown-item">6</a>
+                          <a href="#" class="dropdown-item">7</a>
+                          <a href="#" class="dropdown-item">8</a>
+                          <a href="#" class="dropdown-item">9</a>
+                          <a href="#" class="dropdown-item">10</a>
+                          <hr class="dropdown-divider">
+                          <a href="#" class="dropdown-item">Other Amount</a>
+                        </div>
+                      </div>
+                      <button class="button is-success">Add to Order</button> */
