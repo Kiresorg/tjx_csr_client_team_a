@@ -69,6 +69,7 @@
     - ![API Flow](./pictures/API_flow.PNG "API Flow")
 * Database
     - MySQL Database
+    - Entity Relationship Model (ERM)
     - ![Database ERD](./pictures/ERD.png "Database ERD")
 * Frontend 
     - CSS: [Bulma](https://bulma.io/) for styling 
